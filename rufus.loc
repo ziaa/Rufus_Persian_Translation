@@ -14979,16 +14979,17 @@ b "en-US"
 
 # Main dialog
 g IDD_DIALOG
-t IDS_DEVICE_TXT "وسیله جانبی"
+# s IDD_DIALOG +62,0
+t IDS_DEVICE_TXT "انتخاب درایو USB (فلش مموری، مموری کارت و یا سایر رسانه‌های ذخیره‌ساز)"
 t IDS_PARTITION_TYPE_TXT "Partition scheme and target system type"
-t IDS_FILESYSTEM_TXT "سیستم فایل"
-t IDS_CLUSTERSIZE_TXT "اندازه کلاستر"
-t IDS_LABEL_TXT "New volume label"
-t IDS_FORMAT_OPTIONS_GRP "Format Options"
+t IDS_FILESYSTEM_TXT "سیستم فایل (File system)"
+t IDS_CLUSTERSIZE_TXT "اندازه کلاستر (Cluster size)"
+t IDS_LABEL_TXT "نام دلخواه برای رسانه‌ی ذخیره‌ساز (فلش مموری، مموری کارت و ...)"
+t IDS_FORMAT_OPTIONS_GRP "گزینه‌ها و تنظیمات"
 # Note: The button (IDC_ADVANCED) that appears next to "Format Options" is repositioned automatically.
-t IDC_BADBLOCKS "Check device for bad blocks"
+t IDC_BADBLOCKS "بررسی وجود بد سکتور در رسانه‌ی ذخیره‌ساز"
 t IDC_QUICKFORMAT "فرمت کردن سریع"
-t IDC_BOOT "ساخت دیسک بوتیبل به وسیله"
+t IDC_BOOT "ساخت دیسک قابل بوت (bootable) با استفاده از:"
 t IDC_WINDOWS_INSTALL "Standard Windows installation"
 # Only translate if Microsoft has a specific name for http://en.wikipedia.org/wiki/Windows_To_Go in your language
 # Otherwise, you can add a parenthesis eg. "Windows To Go (hint at what it does)" and/or use the tooltip (MSG_200)
