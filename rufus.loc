@@ -55,6 +55,7 @@
 # l "cs-CZ" "Czech (Čeština)" 0x0405
 # l "da-DK" "Danish (Dansk)" 0x0406
 # l "nl-NL" "Dutch (Nederlands)" 0x0413
+# l "fa-IR" "Persian (فارسی)" 0x0429
 # l "fi-FI" "Finnish (Suomi)" 0x040B
 # l "fr-FR" "French (Français)" 0x040c
 # l "de-DE" "German (Deutsch)" 0x0407
@@ -14999,18 +15000,19 @@ m IDC_BOOTTYPE +70,0
 s IDC_BOOTTYPE -30,0
 m IDC_SELECT_ISO +40,0
 s IDC_INFO +40,0
-s IDC_RUFUS_MBR +40,0
-m IDC_DISK_ID +40,0
+s IDC_RUFUS_MBR +60,0
+m IDC_DISK_ID +70,0
+s IDC_DISK_ID -30,0
 s IDC_ABOUT -30,0
 m IDC_LOG -30,0
 s IDC_LOG +70,0
 m IDC_START +40,0
 m IDCANCEL +40,0
 
-t IDS_DEVICE_TXT "درایو USB مورد نظر (حافظه فلش، کارت حافظه و ...)"
-t IDS_PARTITION_TYPE_TXT "Partition scheme and target system type"
+t IDS_DEVICE_TXT "انتخاب درایو USB مورد نظر (حافظه فلش، کارت حافظه و ...)"
+t IDS_PARTITION_TYPE_TXT "الگوی پارتیشن‌بندی و نوع ثابت‌افزار (Firmware) رایانه"
 t IDS_FILESYSTEM_TXT "سیستم فایل (File system)"
-t IDS_CLUSTERSIZE_TXT "اندازه کلاستر (Cluster size)"
+t IDS_CLUSTERSIZE_TXT "اندازه کلاستر"
 t IDS_LABEL_TXT "نام دلخواه برای درایو USB مورد نظر"
 t IDS_FORMAT_OPTIONS_GRP "گزینه‌ها و تنظیمات"
 # Note: The button (IDC_ADVANCED) that appears next to "Format Options" is repositioned automatically.
@@ -15027,14 +15029,14 @@ t IDC_LOG "جزئیات ثبت‌شده (Log)"
 t IDCANCEL "خروج"
 t IDC_START "شروع"
 t IDS_ADVANCED_OPTIONS_GRP "تنظیمات پیشرفته‌تر"
-t IDC_ENABLE_FIXED_DISKS "List USB Hard Drives"
+t IDC_ENABLE_FIXED_DISKS "نمایش هارد دیسک‌های اکسترنال در فهرست درایوهای USB موجود"
 # Note: It is acceptable to drop the parenthesis () below if you are running out of space
 # as there is a tooltip (MSG_169) providing these details.
-t IDC_EXTRA_PARTITION "Add fixes for old BIOSes (extra partition, align, etc.)"
+t IDC_EXTRA_PARTITION "افزودن برخی تنظیمات برای شناسایی بهتر درایو راه‌انداز، در بایوس‌(BIOS)های قدیمی"
 # 'MBR': See http://en.wikipedia.org/wiki/Master_boot_record
 # Rufus can install it's own custom MBR (the Rufus MBR), which also allows users
 # to specify a custom disk ID for the BIOS. Note: the tooltip for this control is MSG_167.
-t IDC_RUFUS_MBR "Use Rufus MBR with BIOS ID"
+t IDC_RUFUS_MBR "استفاده از Rufus MBR با BIOS ID برابر با:"
 
 # About dialog
 g IDD_ABOUTBOX
