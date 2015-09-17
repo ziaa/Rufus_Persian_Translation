@@ -14994,37 +14994,39 @@ s IDC_RUFUS_MBR +40,0
 s IDC_BADBLOCKS +100,0
 s IDC_NBPASSES -60,0
 m IDC_NBPASSES +100,0
-s IDC_BOOT +40,0
-m IDC_BOOTTYPE +40,0
+s IDC_BOOT +60,0
+m IDC_BOOTTYPE +70,0
+s IDC_BOOTTYPE -30,0
 m IDC_SELECT_ISO +40,0
 s IDC_INFO +40,0
 s IDC_RUFUS_MBR +40,0
 m IDC_DISK_ID +40,0
-s IDC_ABOUT +10,0
-m IDC_LOG +10,0
+s IDC_ABOUT -30,0
+m IDC_LOG -30,0
+s IDC_LOG +70,0
 m IDC_START +40,0
 m IDCANCEL +40,0
 
-t IDS_DEVICE_TXT "انتخاب درایو USB (فلش مموری، مموری کارت و یا سایر رسانه‌های ذخیره‌ساز)"
+t IDS_DEVICE_TXT "درایو USB مورد نظر (حافظه فلش، کارت حافظه و ...)"
 t IDS_PARTITION_TYPE_TXT "Partition scheme and target system type"
 t IDS_FILESYSTEM_TXT "سیستم فایل (File system)"
 t IDS_CLUSTERSIZE_TXT "اندازه کلاستر (Cluster size)"
-t IDS_LABEL_TXT "نام دلخواه برای رسانه‌ی ذخیره‌ساز (فلش مموری، مموری کارت و ...)"
+t IDS_LABEL_TXT "نام دلخواه برای درایو USB مورد نظر"
 t IDS_FORMAT_OPTIONS_GRP "گزینه‌ها و تنظیمات"
 # Note: The button (IDC_ADVANCED) that appears next to "Format Options" is repositioned automatically.
-t IDC_BADBLOCKS "بررسی وجود بد سکتور در رسانه‌ی ذخیره‌ساز"
+t IDC_BADBLOCKS "بررسی وجود بد سکتور در حافظه فلش"
 t IDC_QUICKFORMAT "فرمت کردن سریع"
-t IDC_BOOT "ساخت دیسک قابل بوت (bootable) با استفاده از:"
+t IDC_BOOT "ساخت درایو USB راه‌انداز (Bootable) با استفاده از:"
 t IDC_WINDOWS_INSTALL "Standard Windows installation"
 # Only translate if Microsoft has a specific name for http://en.wikipedia.org/wiki/Windows_To_Go in your language
 # Otherwise, you can add a parenthesis eg. "Windows To Go (hint at what it does)" and/or use the tooltip (MSG_200)
 t IDC_WINDOWS_TO_GO "Windows To Go"
-t IDC_SET_ICON "Create extended label and icon files"
-t IDC_ABOUT "About..."
-t IDC_LOG "Log"
-t IDCANCEL "Close"
-t IDC_START "Start"
-t IDS_ADVANCED_OPTIONS_GRP "Advanced Options"
+t IDC_SET_ICON "ایجاد آیکون و نام‌گذاری درایو USB با استفاده از فایل autorun.inf"
+t IDC_ABOUT "درباره"
+t IDC_LOG "جزئیات ثبت‌شده (Log)"
+t IDCANCEL "خروج"
+t IDC_START "شروع"
+t IDS_ADVANCED_OPTIONS_GRP "تنظیمات پیشرفته‌تر"
 t IDC_ENABLE_FIXED_DISKS "List USB Hard Drives"
 # Note: It is acceptable to drop the parenthesis () below if you are running out of space
 # as there is a tooltip (MSG_169) providing these details.
