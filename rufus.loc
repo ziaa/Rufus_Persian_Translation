@@ -15055,9 +15055,9 @@ t IDCANCEL "بستن"
 
 # Notifications. You can trigger one of these by using Alt-R and re-launching Rufus
 g IDD_NOTIFICATION
-t IDC_MORE_INFO "More information"
-t IDYES "Yes"
-t IDNO "No"
+t IDC_MORE_INFO "اطلاعات بیشتر"
+t IDYES "بله"
+t IDNO "خیر"
 
 # Log dialog
 g IDD_LOG
