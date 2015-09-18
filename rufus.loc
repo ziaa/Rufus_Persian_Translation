@@ -15050,8 +15050,8 @@ t IDOK "بستن"
 
 # About -> License dialog
 g IDD_LICENSE
-t IDD_LICENSE "Rufus License"
-t IDCANCEL "Close"
+t IDD_LICENSE "Rufus پروانه نرم‌افزار"
+t IDCANCEL "بستن"
 
 # Notifications. You can trigger one of these by using Alt-R and re-launching Rufus
 g IDD_NOTIFICATION
