@@ -15043,9 +15043,9 @@ s IDC_ABOUT_LICENSE +40,0
 m IDC_ABOUT_UPDATES +40,0
 s IDC_ABOUT_UPDATES +40,0
 m IDOK +20,0
-# NOTE: To make the output look correctly, there are two invisible Unicode directional formatting characters in the line below
-#       RLE (right-to-left embedding)(UTF-8: 0xE2 0x80 0xAB)
-#       PDF (pop directional formatting)(UTF-8: 0xE2 0x80 0xAC)
+# NOTE: To make the output looks correctly, there are two invisible Unicode directional formatting characters in the line below.
+#       RLE (right-to-left embedding, UTF-8: 0xE2 0x80 0xAB) at the beginning of the string
+#       PDF (pop directional formatting, UTF-8: 0xE2 0x80 0xAC) at the end of the string
 t IDD_ABOUTBOX "‫درباره Rufus‬"
 t IDC_ABOUT_LICENSE "پروانه نرم‌افزار (License)"
 t IDC_ABOUT_UPDATES "به‌روزرسانی نرم‌افزار"
@@ -15053,7 +15053,10 @@ t IDOK "بستن"
 
 # About -> License dialog
 g IDD_LICENSE
-t IDD_LICENSE "‏‫پروانه نرم‌افزار Rufus"
+# NOTE: To make the output looks correctly, there are two invisible Unicode directional formatting characters in the line below.
+#       RLE (right-to-left embedding, UTF-8: 0xE2 0x80 0xAB) at the beginning of the string
+#       PDF (pop directional formatting, UTF-8: 0xE2 0x80 0xAC) at the end of the string
+t IDD_LICENSE "‫پروانه نرم‌افزار Rufus‬"
 t IDCANCEL "بستن"
 
 # Notifications. You can trigger one of these by using Alt-R and re-launching Rufus
@@ -15064,19 +15067,25 @@ t IDNO "خیر"
 
 # Log dialog
 g IDD_LOG
-t IDD_LOG "Log"
-t IDC_LOG_CLEAR "Clear Log"
-t IDC_LOG_SAVE "Save Log"
-t IDCANCEL "Close Log"
+m IDC_LOG_CLEAR -290,0
+m IDC_LOG_SAVE -290,0
+t IDD_LOG "جزئیات ثبت‌شده (Log)"
+t IDC_LOG_CLEAR "پاک کردن Log"
+t IDC_LOG_SAVE "ذخیره Log"
+t IDCANCEL "بستن"
 
 # About -> Updates
 g IDD_UPDATE_POLICY
-t IDD_UPDATE_POLICY "Update policy and settings"
-t IDS_UPDATE_SETTINGS_GRP "Settings"
-t IDS_UPDATE_FREQUENCY_TXT "Check for updates:"
-t IDS_INCLUDE_BETAS_TXT "Include beta versions:"
+s IDS_UPDATE_FREQUENCY_TXT +20,0
+s IDS_INCLUDE_BETAS_TXT +20,0
+m IDC_UPDATE_FREQUENCY +10,0
+m IDC_INCLUDE_BETAS +10,0
+t IDD_UPDATE_POLICY "سیاست و تنظیمات به‌روزرسانی نرم‌افزار"
+t IDS_UPDATE_SETTINGS_GRP "تنظیمات"
+t IDS_UPDATE_FREQUENCY_TXT "بررسی و به‌روز‌رسانی خودکار:"
+t IDS_INCLUDE_BETAS_TXT "شامل نسخه‌های آزمایشی (Beta):"
 t IDC_CHECK_NOW "Check Now"
-t IDCANCEL "Close"
+t IDCANCEL "بستن"
 
 # Dialog that appears when a new version is available
 g IDD_NEW_VERSION
