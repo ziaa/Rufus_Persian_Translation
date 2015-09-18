@@ -15043,7 +15043,10 @@ s IDC_ABOUT_LICENSE +40,0
 m IDC_ABOUT_UPDATES +40,0
 s IDC_ABOUT_UPDATES +40,0
 m IDOK +20,0
-t IDD_ABOUTBOX "Rufus درباره"
+# NOTE: To make the output look correctly, there are two invisible Unicode directional formatting characters in the line below
+#       RLE (right-to-left embedding)(UTF-8: 0xE2 0x80 0xAB)
+#       PDF (pop directional formatting)(UTF-8: 0xE2 0x80 0xAC)
+t IDD_ABOUTBOX "‫درباره Rufus‬"
 t IDC_ABOUT_LICENSE "پروانه نرم‌افزار (License)"
 t IDC_ABOUT_UPDATES "به‌روزرسانی نرم‌افزار"
 t IDOK "بستن"
