@@ -15008,9 +15008,8 @@ m IDC_LOG -30,0
 s IDC_LOG +70,0
 m IDC_START +40,0
 m IDCANCEL +40,0
-
 t IDS_DEVICE_TXT "انتخاب درایو USB مورد نظر (حافظه فلش، کارت حافظه و ...)"
-t IDS_PARTITION_TYPE_TXT "الگوی پارتیشن‌بندی و نوع ثابت‌افزار (Firmware) رایانه"
+t IDS_PARTITION_TYPE_TXT "روش پارتیشن‌بندی و نوع ثابت‌افزار (Firmware) رایانه مورد نظر"
 t IDS_FILESYSTEM_TXT "سیستم فایل (File system)"
 t IDS_CLUSTERSIZE_TXT "اندازه کلاستر"
 t IDS_LABEL_TXT "نام دلخواه برای درایو USB مورد نظر"
@@ -15019,10 +15018,10 @@ t IDS_FORMAT_OPTIONS_GRP "گزینه‌ها و تنظیمات"
 t IDC_BADBLOCKS "بررسی وجود بد سکتور در حافظه فلش"
 t IDC_QUICKFORMAT "فرمت کردن سریع"
 t IDC_BOOT "ساخت درایو USB راه‌انداز (Bootable) با استفاده از:"
-t IDC_WINDOWS_INSTALL "Standard Windows installation"
+t IDC_WINDOWS_INSTALL "نصب ویندوز به روش استاندارد و رایج"
 # Only translate if Microsoft has a specific name for http://en.wikipedia.org/wiki/Windows_To_Go in your language
 # Otherwise, you can add a parenthesis eg. "Windows To Go (hint at what it does)" and/or use the tooltip (MSG_200)
-t IDC_WINDOWS_TO_GO "Windows To Go"
+t IDC_WINDOWS_TO_GO "استفاده از ویژگی Windows To Go (اجرای ویندوز از روی درایو USB بدون نیاز به نصب آن)"
 t IDC_SET_ICON "ایجاد آیکون و نام‌گذاری درایو USB با استفاده از فایل autorun.inf"
 t IDC_ABOUT "درباره"
 t IDC_LOG "جزئیات ثبت‌شده (Log)"
@@ -15040,10 +15039,14 @@ t IDC_RUFUS_MBR "استفاده از Rufus MBR با BIOS ID برابر با:"
 
 # About dialog
 g IDD_ABOUTBOX
-t IDD_ABOUTBOX "About Rufus"
-t IDC_ABOUT_LICENSE "License"
-t IDC_ABOUT_UPDATES "Updates"
-t IDOK "OK"
+s IDC_ABOUT_LICENSE +40,0
+m IDC_ABOUT_UPDATES +40,0
+s IDC_ABOUT_UPDATES +40,0
+m IDOK +20,0
+t IDD_ABOUTBOX "Rufus درباره"
+t IDC_ABOUT_LICENSE "پروانه نرم‌افزار (License)"
+t IDC_ABOUT_UPDATES "به‌روزرسانی نرم‌افزار"
+t IDOK "بستن"
 
 # About -> License dialog
 g IDD_LICENSE
