@@ -15080,36 +15080,45 @@ s IDS_UPDATE_FREQUENCY_TXT +20,0
 s IDS_INCLUDE_BETAS_TXT +20,0
 m IDC_UPDATE_FREQUENCY +10,0
 m IDC_INCLUDE_BETAS +10,0
+s IDC_CHECK_NOW +20,0
+m IDC_CHECK_NOW -10,0
+s IDCANCEL +20,0
+m IDCANCEL -10,0
 t IDD_UPDATE_POLICY "سیاست و تنظیمات به‌روزرسانی نرم‌افزار"
 t IDS_UPDATE_SETTINGS_GRP "تنظیمات"
 t IDS_UPDATE_FREQUENCY_TXT "بررسی و به‌روز‌رسانی خودکار:"
 t IDS_INCLUDE_BETAS_TXT "شامل نسخه‌های آزمایشی (Beta):"
-t IDC_CHECK_NOW "Check Now"
+t IDC_CHECK_NOW "همین الآن بررسی کن!"
 t IDCANCEL "بستن"
 
 # Dialog that appears when a new version is available
 g IDD_NEW_VERSION
-t IDD_NEW_VERSION "Check For Updates - Rufus"
-t IDS_NEW_VERSION_AVAIL_TXT "A newer version is available. Please download the latest version!"
-t IDC_WEBSITE "Click here to go to the website"
-t IDS_NEW_VERSION_NOTES_GRP "Release Notes"
-t IDS_NEW_VERSION_DOWNLOAD_GRP "Download"
-t IDC_DOWNLOAD "Download"
-t IDCANCEL "Close"
+t IDD_NEW_VERSION "Rufus بررسی آپدیت‌های جدید و به‌روزرسانی نرم‌افزار"
+t IDS_NEW_VERSION_AVAIL_TXT "نسخه جدیدی از نرم‌افزار موجود است. لطفا آخرین نسخه نرم‌افزار را دانلود کنید!"
+t IDC_WEBSITE "برای رفتن به سایت نرم‌افزار، کلیک کنید."
+t IDS_NEW_VERSION_NOTES_GRP "یادداشت‌های انتشار نسخه جدید (Release Notes)"
+t IDS_NEW_VERSION_DOWNLOAD_GRP "دانلود"
+t IDC_DOWNLOAD "دانلود"
+t IDCANCEL "بستن"
 
 # Messages used throughout the application
-t MSG_001 "Other instance detected"
-t MSG_002 "Another Rufus application is running.\n"
-	"Please close the first application before running another one."
-t MSG_003 "WARNING: ALL DATA ON DEVICE '%s' WILL BE DESTROYED.\n"
-	"To continue with this operation, click OK. To quit click CANCEL."
-t MSG_004 "Rufus update policy"
-t MSG_005 "Do you want to allow Rufus to check for application updates online?"
+t MSG_001 "شناسایی نمونه دیگری از نرم‌افزار"
+# NOTE: To make the output look correctly, in the line below there are RLE & PDF invisible Unicode directional formatting characters.
+#		Position: (RLE) At the beginning and (PDF) at the end of each line.
+t MSG_002 "‫نمونه دیگری از نرم‌افزار Rufus در حال اجراست.‬\n"
+	"‫لطفاً قبل از باز کردن نرم‌افزار جدید، نمونه قبلی در حال اجرا را ببندید.‬"
+# NOTE: To make the output look correctly, in the line below there are LRE & PDF invisible Unicode directional formatting characters.
+#		Position: (LRE) At the beginning and (PDF) at the end of %s.
+t MSG_003 "هشدار!\n"
+	"تمام داده‌ها و اطلاعات موجود در درایو '‪%s‬' پاک خواهد شد.\n"
+	"آیا برای ادامه این عملیات مطمئن هستید؟"
+t MSG_004 "سیاست به‌روزرسانی نرم‌افزار"
+t MSG_005 "آیا برای بررسی آپدیت جدید و به‌روزرسانی نرم‌افزار، به Rufus اجازه اتصال به اینترنت را می‌دهید؟"
 # Must be the same as IDD_DIALOG:IDCANCEL (i.e. "Close" - I know it's confusing)
-t MSG_006 "Close"
-t MSG_007 "Cancel"
-t MSG_008 "Yes"
-t MSG_009 "No"
+t MSG_006 "خروج"
+t MSG_007 "لغو"
+t MSG_008 "بله"
+t MSG_009 "خیر"
 t MSG_010 "Bad blocks found"
 t MSG_011 "Check completed: %d bad block(s) found\n"
 	"  %d read error(s)\n  %d write error(s)\n  %d corruption error(s)\n"
