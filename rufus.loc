@@ -15145,9 +15145,9 @@ t MSG_028 "مگابایت"
 t MSG_029 "پیش‌فرض"
 # The following gets appended to the file system, cluster size, etc.
 t MSG_030 "%s (پیش‌فرض)"
-t MSG_031 "الگوی پارتیشن‌بندی %s برای BIOS یا %s"
-t MSG_032 "الگوی پارتیشن‌بندی %s برای BIOS"
-t MSG_033 "الگوی پارتیشن‌بندی %s برای UEFI"
+t MSG_031 "الگوی پارتیشن‌بندی %s برای رایانه‌های دارای BIOS یا %s"
+t MSG_032 "الگوی پارتیشن‌بندی %s برای رایانه‌های دارای BIOS"
+t MSG_033 "الگوی پارتیشن‌بندی %s برای رایانه‌های دارای UEFI"
 # Number of bad block check passes (singular for 1 pass, plural for 2 or more passes)
 #CheckZia
 t MSG_034 "%d Pass"
