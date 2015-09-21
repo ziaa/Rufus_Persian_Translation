@@ -15152,7 +15152,7 @@ t MSG_033 "الگوی پارتیشن‌بندی %s برای رایانه‌ها�
 #CheckZia
 t MSG_034 "%d Pass"
 t MSG_035 "%d Passes"
-t MSG_036 "فایل ISO"
+t MSG_036 "ISO Image"
 #CheckZia
 t MSG_037 "برنامه"
 t MSG_038 "متوقف کردن"
@@ -15176,7 +15176,7 @@ t MSG_051 "برخورد با خطای نامشخص، هنگام فرمت کرد�
 t MSG_052 "برای این رسانه ذخیره‌سازی، نمی‌توان از سیستم فایل انتخاب شده استفاده کرد."
 t MSG_053 "اجازه دسترسی به درایو انتخاب‌شده وجود ندارد."
 t MSG_054 "درایو انتخاب‌شده نسبت به «نوشتن» محافظت شده است (Write Protected)."
-t MSG_055 "برنامه یا فرآیند (process) دیگری در حال استفاده از درایو انتخاب‌شده است."
+t MSG_055 "برنامه یا فرآیند (Process) دیگری در حال استفاده از درایو انتخاب‌شده است."
 	"لطفاً سایر برنامه‌هایی را که در حال استفاده کردن از درایو موردنظر هستند؛ ببندید."
 t MSG_056 "برای درایو انتخاب‌شده، امکان فرمت کردن سریع وجود ندارد."
 t MSG_057 "نام انتخاب‌شده برای درایو، نامعتبر است. لطفاً نام دیگری را انتخاب کنید."
@@ -15215,44 +15215,45 @@ t MSG_080 "ویندوز درحال تخلیه اطلاعات و میان‌گی�
 	"با توجه به سرعت درایو USB‌، این فرآیند ممکن است مقداری طول بکشد (به ویژه برای فایل‌های بزرگ).\n\n"
 	"برای جلوگیری از خرابی فایل‌ها، بهتر است اجازه دهید ویندوز کار خود را کامل کند."
 	"اما اگر از صبرکردن خسته شده‌اید؛ می‌توانید وسیله مورد نظر را از درگاه USB بیرون بیاورید."
-t MSG_081 "Unsupported image"
-t MSG_082 "This image is either non-bootable, or it uses a boot or compression method that is not supported by Rufus..."
-t MSG_083 "Replace %s?"
-t MSG_084 "This ISO image seems to use an obsolete version of '%s'.\n"
-	"Boot menus may not display properly because of this.\n\n"
-	"A newer version can be downloaded by Rufus to fix this issue:\n"
-	"- Choose 'Yes' to connect to the internet and download the file\n"
-	"- Choose 'No' to leave the existing ISO file unmodified\n"
-	"If you don't know what to do, you should select 'Yes'.\n\n"
-	"Note: The new file will be downloaded in the current directory and once a "
-	"'%s' exists there, it will be reused automatically."
-t MSG_085 "Downloading %s"
-t MSG_086 "No image selected"
+t MSG_081 "فایل ایمیج، قابل پشتیبانی نیست"
+t MSG_082 "فایل ایمیج (Image) انتخاب شده، قابلیت راه‌اندازی سیستم‌عامل را ندارد (none-bootable) یا ساختاری دارد که Rufus آن را پشتیبانی نمی‌کند."
+t MSG_083 "%s جایگزین شود؟"
+t MSG_084 "انگار این فایل ISO از نسخه قدیمی «%s» استفاده می‌کند.\n"
+	"به همین دلیل، ممکن است منوی راه اندازی (Boot Menu) به درستی نمایش داده نشود.\n\n"
+	"برای از بین بردن این مشکل، Rufus می‌تواند نسخه جدید آن را دانلود کند.\n"
+	"-برای اتصال به اینترنت و دانلود این فایل «بله» را انتخاب کنید\n"
+	"-اگر نمی‌خواهید این فایل را دانلود کنید، «خیر» را انتخاب کنید.\n\n"
+	"نکته: این فایل در پوشه نرم‌افزار دانلود می‌شود و در دفعات بعد  به صورت خودکار از آن استفاده خواهد شد."	
+t MSG_085 "در حال دانلود کردن %s"
+t MSG_086 "فایل ایمیج انتخاب نشده است"
 # The content between the quotes below (\"Create a bootable disk\") should match
 # the beginning of the IDC_BOOT text
-t MSG_087 "Please click on the disc button to select a bootable image, "
-	"or uncheck the \"Create a bootable disk using\" checkbox."
-t MSG_088 "Image is too big"
-t MSG_089 "The image is too big for the selected target."
-t MSG_090 "Unsupported ISO"
-t MSG_091 "When using UEFI Target Type, only EFI bootable ISO images are supported. "
-	"Please select an EFI bootable ISO or set the Target Type to BIOS."
-t MSG_092 "Unsupported filesystem"
-t MSG_093 "IMPORTANT: THIS DRIVE CONTAINS MULTIPLE PARTITIONS!!\n\n"
-	"This may include partitions/volumes that aren't listed or even visible from Windows. "
-	"Should you wish to proceed, you are responsible for any data loss on these partitions."
-t MSG_094 "Multiple partitions detected"
+t MSG_087 "لطفاً  با کلیک بر روی آیکون CD یک فایل ایمیج (Image) انتخاب کنید؛ "
+	"یا گزینه «ساخت درایو USB راه‌انداز (Bootable) با استفاده از:» را غیرفعال کنید."
+t MSG_088 "فایل ایمیج بیش از اندازه بزرگ است"
+t MSG_089 "اندازه فایل ایمیج (Image) از ظرفیت درایو انتخاب‌شده بیشتر است."
+t MSG_090 "خطا در انتخاب فایل ISO"
+# NOTE: To make the output look correctly, in the line below there are RLE & PDF invisible Unicode directional formatting characters.
+#		Position: (RLE) At the beginning and (PDF) at the end of string.
+t MSG_091 "‫هنگامی‌که نوع UEFI را انتخاب می‌کنید؛ فقط می‌توانید از فایل‌های ISO با قابلیت راه‌اندازی EFI (EFI Bootable) استفاده کنید. ‬"
+	"لطفاً از یک فایل ISO با قابلیت راه‌اندازی EFI استفاده کنید یا در گزینه‌ها نوع BIOS را انتخاب کنید."
+t MSG_092 "فایل سیستم پشتیبانی نمی‌شود"
+t MSG_093 "هشدار مهم!: درایو انتخاب‌شده چندین پارتیشن دارد.\n\n"
+	"ممکن است این پارتیشن‌ها پنهان باشند و شما آن‌ها را در فهرست ویندوز نبینید. "
+	"اگر می‌خواهید ادامه دهید، مسئولیت پاک شدن اطلاعاتتان با خود شما است!"
+t MSG_094 "چندین پارتیشن شناسایی شده است"
 t MSG_095 "DD Image"
-t MSG_096 "The file system currently selected can not be used with this type of ISO. "
-	"Please select a different file system or use a different ISO."
-t MSG_097 "'%s' can only be applied if the file system is NTFS."
-t MSG_098 "IMPORTANT: You are trying to install 'Windows To Go', but your target drive doesn't "
-	"have the 'FIXED' attribute. Because of this Windows will most likely freeze during boot, "
-	"as Microsoft hasn't designed it to work with drives that instead have the 'REMOVABLE' "
-	"attribute.\n\nDo you still want to proceed?\n\n"
-	"Note: The 'FIXED/REMOVABLE' attribute is a hardware property that can only be changed "
-	"using custom tools from the drive manufacturer. However those tools are ALMOST NEVER "
-	"provided to the public..."
+t MSG_096 "سیستم فایلی را که انتخاب کرده‌اید  با این نوع از فایل ISO نمی‌توان استفاده کرد. "
+	"لطفاً سیستم فایل یا فایل ISO دیگری را انتخاب کنید."
+#CheckZia	
+t MSG_097 "«%s» فقط زمانی قابل استفاده است که سیستم فایل NTFS باشد."
+t MSG_098 "هشدار مهم! : شما گزینه «Windows To Go» را انتخاب کرده‌اید اما درایو مورد نظر شما فاقد ویژگی «FIXED» است. "
+	"به همین دلیل هنگام راه‌اندازی سیستم‌عامل (Boot) با استفاده از این درایو به احتمال زیاد اجرای ویندوز متوقف می‌شود. "
+	"چون‌که مایکروسافت این امکان را برای درایوهایی که ویژگی «REMOVABLE» دارند، طراحی نکرده است.\n\n"
+	"آیا می‌خواهید این کار را ادامه دهید؟\n\n"
+	"نکته: ویژگی‌های «FIXED» و «REMOVABLE» خاصیت سخت‌افزاری هستند "
+	"و فقط شرکت‌های سازنده درایو با ابزارهای مخصوصی می‌توانند آن‌ها را تغییر دهند. "
+	"این ابزارها تقریبا هیچ‌وقت در اختیار عموم مردم قرار نمی‌گیرد."
 t MSG_099 "Filesystem limitation"
 t MSG_100 "This ISO image contains a file larger than 4GB, which is more than the "
 	"maximum size allowed for a FAT or FAT32 file system."
