@@ -15254,58 +15254,60 @@ t MSG_098 "هشدار مهم! : شما گزینه «Windows To Go» را انت�
 	"نکته: ویژگی‌های «FIXED» و «REMOVABLE» خاصیت سخت‌افزاری هستند "
 	"و فقط شرکت‌های سازنده درایو با ابزارهای مخصوصی می‌توانند آن‌ها را تغییر دهند. "
 	"این ابزارها تقریبا هیچ‌وقت در اختیار عموم مردم قرار نمی‌گیرد."
-t MSG_099 "Filesystem limitation"
-t MSG_100 "This ISO image contains a file larger than 4GB, which is more than the "
-	"maximum size allowed for a FAT or FAT32 file system."
-t MSG_101 "Missing WIM support"
-t MSG_102 "Your platform cannot extract files from WIM archives. WIM extraction "
-	"is required to create EFI bootable Windows 7 and Windows Vista USB drives. You can fix that "
-	"by installing a recent version of 7-Zip.\nDo you want to visit the 7-zip download page?"
-t MSG_103 "Download %s?"
+t MSG_099 "محدودیت در سیستم فایل"
+t MSG_100 "ایمیج (Image) انتخاب شده فایلی بزرگ‌تر از ۴ گیگابایت دارد. "
+	"این مقدار از حداکثر اندازه مجاز برای سیستم فایل FAT و FAT32 بیشتر است."
+t MSG_101 "استخراج اطلاعات فایل WIM پشتیبانی نمی‌شود"
+#CheckZia
+t MSG_102 "سیستم عامل شما نمی‌تواند اطلاعات فایل‌های WIM را از حالت فشرده خارج کند. "
+	"استخراج اطلاعات موجود در این نوع از فایل‌ها، برای ساختن درایو USB «ویندوز ویستا» و «ویندوز ۷» با قابلیت راه‌اندازی EFI لازم است. "
+	"شما می‌توانید با نصب کردن نرم‌افزار 7-Zip این مشکل را حل کنید.\n"
+	"آیا می‌خواهید وارد سایت دانلود نرم‌افزار 7-Zip شوید؟"
+t MSG_103 "%s دانلود شود؟"
 # Eg. "Grub4DOS v0.4 or later requires a 'grldr' file to be installed. Because this file
 #      is more than 100 KB in size, and always present on Grub4DOS ISO images, etc."
-t MSG_104 "%s or later requires a '%s' file to be installed.\n"
-	"Because this file is more than 100 KB in size, and always present on %s ISO images, "
-	"it is not embedded in Rufus.\n\nRufus can download the missing file for you:\n"
-	"- Select 'Yes' to connect to the internet and download the file\n"
-	"- Select 'No' if you want to manually copy this file on the drive later\n\n"
-	"Note: The file will be downloaded in the current directory and once a "
-	"'%s' exists there, it will be reused automatically.\n"
-t MSG_105 "Cancelling may leave the device in an UNUSABLE state.\n"
-	"If you are sure you want to cancel, click YES. Otherwise, click NO."
-t MSG_106 "Please select folder"
-t MSG_107 "All files"
+t MSG_104 "%s یا نسخه‌های بعدی آن، نیازمند فایل %s است.\n"
+	"چون اندازه این فایل از ۱۰۰ کیلوبایت بیشتر است و معمولا در ایمیج‌های %s موجود است؛ "
+	"این فایل به همراه نرم‌افزار Rufus عرضه نشده است.\n\nRufus می‌تواند این فایل را از اینترنت دانلود کند.\n"
+	"-برای اتصال به اینترنت و دانلود این فایل «بله» را انتخاب کنید\n"
+	"-اگر می‌خواهید بعداً خودتان این فایل را در درایو مورد نظر کپی کنید؛ «خیر» را انتخاب کنید\n\n"
+	"نکته: این فایل در پوشه نرم‌افزار دانلود می‌شود و در دفعات بعد  به صورت خودکار از آن استفاده خواهد شد."	
+t MSG_105 "لغو این فرآیند ممکن است درایو مورد نظر را در وضعیت غیرقابل استفاده (UNUSABLE) قرار دهد.\n"
+	"آیا مطمئن هستید که می‌خواهید این فرآیند را لفو کنید؟"
+t MSG_106 "لطفاً یک پوشه انتخاب کنید"
+t MSG_107 "همه فایل‌ها"
+#CheckZia
 t MSG_108 "Rufus log"
+#CheckZia
 t MSG_109 "0x%02X (Disk %d)"
 # "Cluster size" below should be the same as the label for IDS_CLUSTERSIZE_TXT
 # "kilobytes" should be the same as in MSG_027
-t MSG_110 "MS-DOS cannot boot from a drive using a 64 kilobytes Cluster size.\n"
-	"Please change the Cluster size or use FreeDOS."
-t MSG_111 "Incompatible Cluster size"
+t MSG_110 "MS-DOS با استفاده از درایوی که انداز کلاستر آن ۶۴ کیلوبایت است؛ راه‌اندازی (Boot) نمی‌شود.\n"
+	"لطفاً اندازه کلاستر را تغییر دهید یا از FreeDOS استفاده کنید."
+t MSG_111 "اندازه کلاستر ناسازگار و نامناسب است"
 # "%d:%02d" below is a duration (mins:secs)
-t MSG_112 "Formatting a large UDF volumes can take a lot of time. At USB 2.0 speeds, the estimated formatting "
-	"duration is %d:%02d, during which the progress bar will appear frozen. Please be patient!"
-t MSG_113 "Large UDF volume"
-t MSG_114 "This image uses Syslinux %s%s but this application only includes the installation files for "
-	"Syslinux %s%s.\n\nAs new versions of Syslinux are not compatible with one another, and it wouldn't "
-	"be possible for Rufus to include them all, two additional files must be downloaded from the "
-	"Internet ('ldlinux.sys' and 'ldlinux.bss'):\n"
-	"- Select 'Yes' to connect to the Internet and download these files\n"
-	"- Select 'No' to cancel the operation\n\n"
-	"Note: The files will be downloaded in the current application directory and will be reused "
-	"automatically if present.\n"
-t MSG_115 "Download required"
+t MSG_112 "معمولاً فرمت کردن درایو UDF حجیم و بزرگ زمان‌بر است. زمان تخمینی با استفاده از درگاه USB 2.0 «%d:%02d» است. "
+	"ممکن است هنگام فرمت کردن، نوار لغزنده‌ای که پیشرفت فرآیند را نشان می‌دهد بی‌حرکت و ثابت شود.\n"
+	"پس لطفاً صبور باشید!"
+t MSG_113 "درایو UDF حجیم"
+t MSG_114 "این ایمیج (Image) از «Syslinux %s%s» استفاده می‌کند. اما نرم‌افزار Rufus فقط تنظیمات و فایل‌های نصب «Syslinux %s%s» را به همراه دارد. "
+	"از آنجا که نسخه‌های مختلف Syslinux با یکدیگر سازگار نیستند و امکان قرار دادن همه آن‌ها در نرم‌افزار Rufus وجود ندارد؛ "
+	"Rufus باید دو فایل «ldlinux.sys» و «ldlinux.bss» را از اینترنت دانلود کند.\n"	
+	"-برای اتصال به اینترنت و دانلود این فایل‌ها «بله» را انتخاب کنید\n"
+	"-اگر از ادامه این فرآیند منصرف شده‌اید، «خیر» را انتخاب کنید.\n\n"
+	"نکته: این فایل‌ها در پوشه نرم‌افزار دانلود می‌شود و در دفعات بعد  به صورت خودکار از آن‌ها استفاده خواهد شد."	
+t MSG_115 "دانلود چند فایل لازم است"
 # Note: You should be able to test this message with Super Grub2 Disk ISO:
 # http://forja.cenatic.es/frs/download.php/file/1757/super_grub2_disk_hybrid_2.00s2.iso (11 MB)
-t MSG_116 "This image uses Grub %s but the application only includes the installation files for "
-	"Grub %s.\n\nAs different versions of Grub may not be compatible with one another, and it is "
-	"not possible to include them all, Rufus will attempt to locate a version of the Grub "
+t MSG_116 "این ایمیج (Image) از «Grub %s» استفاده می‌کند. اما نرم‌افزار Rufus فقط تنظیمات و فایل‌های نصب «Grub %s» را به همراه دارد. "
+	"از آنجا که نسخه‌های مختلف Grub ممکن است با یکدیگر سازگار نباشند و امکان قرار دادن همه آن‌ها در نرم‌افزار Rufus وجود ندارد؛ "
+	"Rufus تلاش می‌کند فایل نصب «core.img» مناسب ایمیج شما را در اینترنت پیدا کند.\n\n"
 	"installation file ('core.img') that matches the one from your image:\n"
-	"- Select 'Yes' to connect to the Internet and attempt to download it\n"
-	"- Select 'No' to use the default version from Rufus\n"
-	"- Select 'Cancel' to abort the operation\n\n"
-	"Note: The file will be downloaded in the current application directory and will be reused "
-	"automatically if present. If no match can be found online, then the default version will be used."
+	"-برای اتصال به اینترنت و تلاش برای دانلود این فایل «بله» را انتخاب کنید\n"
+	"-اگر می‌خواهید از فایل کنونی و پیش‌فرض Rufus استفاده کنید «خیر» را انتخاب کنید\n"
+	"-اگر از ادامه این فرآیند منصرف شده‌اید، «لغو» را انتخاب کنید.\n\n"
+	"نکته: این فایل در پوشه نرم‌افزار دانلود می‌شود و در دفعات بعد  به صورت خودکار از آن استفاده خواهد شد. "
+	"اگر فایل مناسبی در اینترنت پیدا نشود، نرم‌افزار از نسخه پیش‌فرض استفاده خواهد کرد."
 # Tooltips
 # Partition Scheme and Target Type
 t MSG_150 "Usually the safest choice. However, if you have an UEFI computer and want to install "
