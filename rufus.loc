@@ -15043,7 +15043,7 @@ s IDC_ABOUT_LICENSE +40,0
 m IDC_ABOUT_UPDATES +40,0
 s IDC_ABOUT_UPDATES +40,0
 m IDOK +20,0
-# NOTE: To make the output looks correctly, there are two invisible Unicode directional formatting characters in the line below.
+# TRANSLATOR NOTE: To make the output looks correctly, there are two invisible Unicode directional formatting characters in the line below.
 #       RLE (right-to-left embedding, UTF-8: 0xE2 0x80 0xAB) at the beginning of the string
 #       PDF (pop directional formatting, UTF-8: 0xE2 0x80 0xAC) at the end of the string
 t IDD_ABOUTBOX "‫درباره Rufus‬"
@@ -15452,32 +15452,29 @@ t MSG_241 "در حال دانلود: %0.1f%%"
 t MSG_242 "دانلود فایل ناموفق بود."
 t MSG_243 "در حال بررسی به‌روزرسانی‌های Rufus..."
 t MSG_244 "به‌روزرسانی: نرم‌افزار نتوانست به اینترنت وصل شود"
-#CheckZia
 t MSG_245 "به‌روزرسانی: نرم‌افزار نتوانست به اطلاعات نسخه برنامه دسترسی پیدا کند"
 t MSG_246 "نسخه جدیدی از Rufus موجود است!"
 t MSG_247 "نسخه جدید برای Rufus پیدا نشد."
 t MSG_248 "کلیدهای رجیستری برنامه با موفقیت حذف شدند."
 t MSG_249 "حذف کلیدهای رجیستری برنامه ناموفق بود."
 # eg. "Fixed disk detection enabled" "ISO size check disabled"
-#CheckZia
 t MSG_250 "%s فعال شد."
 t MSG_251 "%s غیرفعال شد."
-t MSG_252 "بررسی اندازه"
-t MSG_253 "تشخیص دیسک سخت (هارد دیسک)"
-#CheckZia
-t MSG_254 "Force large FAT32 formatting"
+t MSG_252 "بررسی اندازه ایمیج"
+t MSG_253 "تشخیص دیسک سخت (هارد دیسک) USB"
+t MSG_254 "وادار کردن استفاده از فرمت Large FAT32"
 t MSG_255 "هنگام خروج، NoDriveTypeAutorun حذف خواهد شد."
 t MSG_256 "تشخیص درایو ساختگی و تقلبی"
 t MSG_257 "پشتیبانی از سیستم فایل Joliet"
 t MSG_258 "پشتیبانی از سیستم فایل Rock Ridge"
-#CheckZia
-t MSG_259 "Force update"
+t MSG_259 "وادار کردن به‌روزرسانی"
 t MSG_260 "فشرده‌سازی NTFS"
 t MSG_261 "در حال نوشتن اطلاعات ایمیج؛ درصد پیشرفت: %0.1f%%"
 # Cheat mode message to disable ISO Support so that only DD images can be opened
 t MSG_262 "پشتیبانی از فایل ISO"
 # Cheat mode to force legacy size units, where 1 KB is 1024 bytes and NOT that fake 1000 bytes abomination!
-t MSG_263 "استفاده از واحدهای حافظه درست (۱ کیلوبایت = ۱۰۲۴ بایت)"
+# TRANSLATOR NOTE: In the line below 'RLE','LRE' & 'PDF' are used
+t MSG_263 "‫نمایش دودویی واحدهای حافظه (‪1 KB = 1024 bytes‬)‬"
 t MSG_264 "در حال حذف کردن پوشه '%s'"
 t MSG_265 "شناسایی دیسک VMWare"
 t MSG_266 "شیوه دوگانه UEFI/BIOS"
@@ -15488,7 +15485,8 @@ t MSG_270 "اشکال‌زدایی (debug) USB"
 t MSG_271 "محاسبه جمع کنترلی (Checksum) ایمیج؛ درصد پیشرفت: %0.1f%%"
 t MSG_272 "محاسبه جمع کنترلی (Checksum) SHA1 و MD5 برای ایمیج انتخاب شده"
 t MSG_273 "تغییر زبان برنامه"
-t MSG_274 "ایمیج ISOHybrid شناسایی شد"
+# TRANSLATOR NOTE: In the line below 'RLE' & 'PDF' are used
+t MSG_274 "‫ایمیج ISOHybrid شناسایی شد‬"
 # '%s' below will be replaced with your translations for MSG_036 ("ISO Image") and MSG_095 ("DD Image")
 t MSG_275 "ایمیجی که شما انتخاب کرده‌اید از نوع «ISOHybrid» است. به این معنی که این فایل می‌تواند "
 	"‫‫به شیوه «%s (کپی کردن فایل)» یا «%s (ایمیج دیسک)» نوشته شود.‬ \n"
