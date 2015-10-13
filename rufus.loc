@@ -14991,21 +14991,20 @@ s IDC_LABEL +40,0
 s IDS_ADVANCED_OPTIONS_GRP +40,0
 s IDC_ENABLE_FIXED_DISKS +40,0
 s IDC_EXTRA_PARTITION +40,0
-s IDC_RUFUS_MBR +40,0
-s IDC_BADBLOCKS +100,0
-s IDC_NBPASSES -60,0
-m IDC_NBPASSES +100,0
-s IDC_BOOT +60,0
-m IDC_BOOTTYPE +70,0
-s IDC_BOOTTYPE -30,0
+s IDC_BADBLOCKS +50,0
+s IDC_NBPASSES -15,0
+m IDC_NBPASSES +55,0
+s IDC_BOOT +55,0
+m IDC_BOOTTYPE +55,0
+s IDC_BOOTTYPE -10,0
 m IDC_SELECT_ISO +40,0
 s IDC_INFO +40,0
-s IDC_RUFUS_MBR +60,0
-m IDC_DISK_ID +70,0
-s IDC_DISK_ID -30,0
-s IDC_ABOUT -30,0
-m IDC_LOG -30,0
-s IDC_LOG +70,0
+s IDC_RUFUS_MBR +40,0
+m IDC_DISK_ID +53,0
+s IDC_DISK_ID -13,0
+s IDC_ABOUT -10,0
+m IDC_LOG -15,0
+s IDC_LOG +40,0
 m IDC_START +40,0
 m IDCANCEL +40,0
 t IDS_DEVICE_TXT "انتخاب درایو USB مورد نظر (حافظه فلش، کارت حافظه و ...)"
@@ -15017,14 +15016,14 @@ t IDS_FORMAT_OPTIONS_GRP "گزینه‌ها و تنظیمات"
 # Note: The button (IDC_ADVANCED) that appears next to "Format Options" is repositioned automatically.
 t IDC_BADBLOCKS "بررسی وجود بدسکتور در درایو انتخاب‌شده"
 t IDC_QUICKFORMAT "فرمت کردن سریع (Quick format)"
-t IDC_BOOT "ساخت درایو USB راه‌انداز (Bootable) با استفاده از:"
+t IDC_BOOT "ساخت درایو راه‌انداز (Bootable) با استفاده از"
 t IDC_WINDOWS_INSTALL "نصب ویندوز به روش استاندارد و رایج"
 # Only translate if Microsoft has a specific name for http://en.wikipedia.org/wiki/Windows_To_Go in your language
 # Otherwise, you can add a parenthesis eg. "Windows To Go (hint at what it does)" and/or use the tooltip (MSG_200)
 t IDC_WINDOWS_TO_GO "استفاده از ویژگی Windows To Go (اجرای ویندوز از روی درایو USB بدون نیاز به نصب آن)"
 t IDC_SET_ICON "ایجاد آیکون و نام‌گذاری درایو USB با استفاده از فایل autorun.inf"
 t IDC_ABOUT "درباره"
-t IDC_LOG "گزارش ثبت‌شده (Log)"
+t IDC_LOG "گزارش (Log)"
 t IDCANCEL "خروج"
 t IDC_START "شروع"
 t IDS_ADVANCED_OPTIONS_GRP "تنظیمات پیشرفته"
@@ -15039,9 +15038,9 @@ t IDC_RUFUS_MBR "استفاده از Rufus MBR با BIOS ID برابر با:"
 
 # About dialog
 g IDD_ABOUTBOX
-s IDC_ABOUT_LICENSE +40,0
-m IDC_ABOUT_UPDATES +40,0
-s IDC_ABOUT_UPDATES +40,0
+s IDC_ABOUT_LICENSE +45,0
+m IDC_ABOUT_UPDATES +45,0
+s IDC_ABOUT_UPDATES +45,0
 m IDOK +20,0
 # TRANSLATOR NOTE: To make the output looks correctly, there are two invisible Unicode directional formatting characters in the line below.
 #       RLE (right-to-left embedding, UTF-8: 0xE2 0x80 0xAB) at the beginning of the string
@@ -15068,7 +15067,9 @@ t IDNO "خیر"
 # Log dialog
 g IDD_LOG
 m IDC_LOG_CLEAR -290,0
-m IDC_LOG_SAVE -290,0
+s IDC_LOG_CLEAR +10,0
+m IDC_LOG_SAVE -280,0
+s IDC_LOG_SAVE +10,0
 # TRANSLATOR NOTE: In the line below 'RLE' & 'PDF' are used
 t IDD_LOG "‫گزارش ثبت‌شده (Log)‬"
 t IDC_LOG_CLEAR "پاک کردن گزارش"
@@ -15077,14 +15078,22 @@ t IDCANCEL "بستن"
 
 # About -> Updates
 g IDD_UPDATE_POLICY
+s IDS_UPDATE_SETTINGS_GRP +45,0
+m IDS_UPDATE_SETTINGS_GRP -60,0
 s IDS_UPDATE_FREQUENCY_TXT +20,0
-s IDS_INCLUDE_BETAS_TXT +20,0
-m IDC_UPDATE_FREQUENCY +10,0
-m IDC_INCLUDE_BETAS +10,0
-s IDC_CHECK_NOW +20,0
-m IDC_CHECK_NOW -10,0
-s IDCANCEL +20,0
-m IDCANCEL -10,0
+m IDS_UPDATE_FREQUENCY_TXT -55,0
+s IDC_UPDATE_FREQUENCY +20,0
+m IDC_UPDATE_FREQUENCY -25,0
+s IDS_INCLUDE_BETAS_TXT +40,0
+m IDS_INCLUDE_BETAS_TXT -55,0
+s IDC_INCLUDE_BETAS +30,0
+m IDC_INCLUDE_BETAS -25,0
+s IDS_CHECK_NOW_GRP +10,0
+m IDS_CHECK_NOW_GRP -10,0
+s IDC_CHECK_NOW +25,0
+m IDC_CHECK_NOW -20,0
+s IDCANCEL +25,0
+m IDCANCEL -20,0
 t IDD_UPDATE_POLICY "سیاست و تنظیمات به‌روزرسانی نرم‌افزار"
 t IDS_UPDATE_SETTINGS_GRP "تنظیمات"
 t IDS_UPDATE_FREQUENCY_TXT "بررسی و به‌روز‌رسانی خودکار:"
@@ -15231,7 +15240,7 @@ t MSG_086 "فایل ایمیج انتخاب نشده است"
 # The content between the quotes below (\"Create a bootable disk\") should match
 # the beginning of the IDC_BOOT text
 t MSG_087 "لطفاً  با کلیک بر روی آیکون CD یک فایل ایمیج (Image) انتخاب کنید؛ "
-	"یا گزینه «ساخت درایو USB راه‌انداز (Bootable) با استفاده از:» را غیرفعال کنید."
+	"یا گزینه «ساخت درایو راه‌انداز (Bootable) با استفاده از» را غیرفعال کنید."
 t MSG_088 "فایل ایمیج بیش از اندازه بزرگ است"
 t MSG_089 "اندازه فایل ایمیج (Image) از ظرفیت درایو انتخاب‌شده بیشتر است."
 t MSG_090 "خطا در انتخاب فایل ISO"
@@ -15275,7 +15284,7 @@ t MSG_104 "%s یا نسخه‌های بعدی آن، نیازمند فایل %s 
 	"-اگر می‌خواهید بعداً خودتان این فایل را در درایو مورد نظر کپی کنید؛ «خیر» را انتخاب کنید\n\n"
 	"نکته: این فایل در پوشه نرم‌افزار دانلود می‌شود و در دفعات بعد  به صورت خودکار از آن استفاده خواهد شد."	
 t MSG_105 "لغو این فرآیند ممکن است درایو مورد نظر را در وضعیت غیرقابل استفاده (UNUSABLE) قرار دهد.\n"
-	"آیا مطمئن هستید که می‌خواهید این فرآیند را لفو کنید؟"
+	"آیا مطمئن هستید که می‌خواهید این فرآیند را لغو کنید؟"
 t MSG_106 "لطفاً یک پوشه انتخاب کنید"
 t MSG_107 "همه فایل‌ها"
 #CheckZia
@@ -15344,9 +15353,8 @@ t MSG_168 "با انتخاب یکی از این گزینه‌ها می‌توا�
 t MSG_169 "افزودن تنظیماتی مثل ساختن یک پارتیشن اضافی و مخفی (Extra hidden partition) در درایو "
 	"و یا تراز کردن (Align) حدود و مرزهای پارتیشن‌ها که باعث شناسایی بهتر درایو در "
 	"بایوس‌های قدیمی می‌شود."
-t MSG_170 "نمایش هارددیسک‌های اکسترنال در فهرست درایوهای USB موجود.\n"
-	"لطفاً با آگاهی کامل این گزینه را انتخاب کنید و در صورت نیاز حتماً از اطلاعات موجود در هارد اکسترنال "
-	"یک نسخه پشتیبان (بکاپ) تهیه کنید."
+t MSG_170 "لطفاً با آگاهی کامل این گزینه را انتخاب کنید و در صورت نیاز حتماً "	
+	"از اطلاعات موجود در هارد اکسترنال یک نسخه پشتیبان (بکاپ) تهیه کنید."
 t MSG_171 "شروع فرآیند فرمت کردن\n با این کار، همه اطلاعات موجود در درایوی که انتخاب کرده‌اید «پاک» می‌شود"
 t MSG_172 "اطلاعات مربوط به پروانه (Licence)، به‌روزرسانی (آپدیت)، سازنده و مترجم نرم‌افزار"
 t MSG_173 "برای انتخاب کلیک کنید"
