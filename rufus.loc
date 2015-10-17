@@ -15390,7 +15390,7 @@ t MSG_203 "بررسی ایمیج ناموفق بود"
 # Parameter: the name of an obsolete Syslinux .c32 module. eg: "Obsolete vesamenu.c32 detected"
 t MSG_204 "فایل قدیمی و منسوخ %s شناسایی شد"
 # Display the name of the image selected. eg: "Using image: en_win7_x64_sp1.iso"
-t MSG_205 "%s در حال استفاده از ایمیج"
+t MSG_205 "در حال استفاده از ایمیج: %s"
 # Typically "Missing ldlinux.c32 file"
 t MSG_206 "فایل %s موجود نیست"
 # The name proposed by Windows' Computer Management -> Disk Management when you try to format a drive
