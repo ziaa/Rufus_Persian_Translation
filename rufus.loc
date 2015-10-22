@@ -15624,7 +15624,7 @@ t MSG_171 "شروع فرآیند فرمت کردن\n با این کار، همه
 t MSG_172 "اطلاعات مربوط به پروانه (Licence)، به‌روزرسانی (آپدیت)، سازنده و مترجم نرم‌افزار"
 t MSG_173 "برای انتخاب کلیک کنید"
 # The following will appear in the about dialog
-# Translator Note: RLE (at the beginning) and PDF (at the end) are used
+# Translator Note: In the line below invisible RLE (at the beginning) and PDF (at the end) are used
 t MSG_174 "‫Rufus، ابزاری کاربردی و قابل‌اطمینان برای فرمت کردن درایوهای USB‬"
 t MSG_175 "نسخه %d.%d (Build %d)"
 t MSG_176 "ترجمه فارسی: سید ضیاء الدین عظیمی «mailto:s.zia.azimi@gmail.com»"	
@@ -15639,7 +15639,7 @@ t MSG_183 "‫آدرس IP شما‬"
 t MSG_184 "به جهت تولید آمار استفاده شخصی، ممکن است ما این اطلاعات جمع‌آوری‌شده را "	
 	"\\b برای حداکثر یکسال \\b0نگه‌داری کنیم. با وجود این، ما از روی میل این داده‌های فردی را در اختیار شخص ثالث قرار نخواهیم داد."
 t MSG_185 "فرآیند به‌روزرسانی:"
-# Translator Note: RLE (at the beginning) and PDF (at the end) are used
+# Translator Note: In the line below invisible RLE (at the beginning) and PDF (at the end) are used
 t MSG_186 "‫Rufus هیچ سرویس پس‌زمینه‌ای را اجرا یا نصب نمی‌کند. بنابراین فقط زمانیکه نرم‌افزار در حال اجرا است فرآیند بررسی به‌روزرسانی‌های جدید انجام می‌شود.‬\\line\n"
 	"واضح است هنگام بررسی به‌روزرسانی‌ها، دسترسی به اینترنت لازم است."
 t MSG_187 "ناهماهنگی بین ایمیج و گزینه راه‌اندازی انتخاب‌شده"
@@ -15665,15 +15665,20 @@ t MSG_199 "اگر می‌خواهید با استفاده از درایو انت
 t MSG_200 "اگر می‌خواهید مستقیماً از روی درایو انتخاب‌شده اقدام به «اجرای ویندوز» کنید؛ این گزینه را انتخاب کنید."
 
 # Status messages - these messages will appear on the status bar
-t MSG_201 "در حال لغوکردن؛ لطفاً صبور باشید..."
-t MSG_202 "در حال پویش و بررسی ایمیج..."
+# Translator Note: In the 2 lines below there are invisible Unicode directional formatting characters.
+#	RLE (RIGHT-TO-LEFT EMBEDDING) at the beginning of the string
+#	PDF (POP DIRECTIONAL FORMATTING) at the end of the string
+t MSG_201 "‫در حال لغوکردن؛ لطفاً صبور باشید...‬"
+t MSG_202 "‫در حال پویش و بررسی ایمیج...‬"
 t MSG_203 "بررسی ایمیج ناموفق بود"
 # Parameter: the name of an obsolete Syslinux .c32 module. eg: "Obsolete vesamenu.c32 detected"
-t MSG_204 "فایل قدیمی و منسوخ %s شناسایی شد"
+# Translator Note: In the line below invisible RLE (at the beginning) and PDF (at the end) are used
+t MSG_204 "‫فایل قدیمی و منسوخ %s شناسایی شد‬"
 # Display the name of the image selected. eg: "Using image: en_win7_x64_sp1.iso"
 t MSG_205 "در حال استفاده از ایمیج: %s"
 # Typically "Missing ldlinux.c32 file"
-t MSG_206 "فایل %s موجود نیست"
+# Translator Note: In the line below invisible RLE (at the beginning) and PDF (at the end) are used
+t MSG_206 "‫فایل %s موجود نیست‬"
 # The name proposed by Windows' Computer Management -> Disk Management when you try to format a drive
 # with an empty label. See http://rufus.akeo.ie/pics/default_name.png
 t MSG_207 "New Volume"
@@ -15684,54 +15689,58 @@ t MSG_210 "آماده"
 t MSG_211 "لغو شد"
 t MSG_212 "ناموفق بود"
 # Used when a new update has been downloaded and launched
-t MSG_213 "در حال راه‌اندازی نسخه جدید نرم‌افزار..."
+# Translator Note: In the line below invisible RLE (at the beginning) and PDF (at the end) are used
+t MSG_213 "‫در حال راه‌اندازی نسخه جدید نرم‌افزار...‬"
 t MSG_214 "راه‌اندازی نسخه جدید نرم‌افزار ناموفق بود"
 # Open/Save file
-t MSG_215 "%s باز شد"
-t MSG_216 "%s ذخیره شد"
+# Translator Note: From MSG_215 to MSG_235, invisible RLE (at the beginning) and PDF (at the end) are used
+t MSG_215 "‫%s باز شد‬"
+t MSG_216 "‫%s ذخیره شد‬"
 # Formatting status (make sure you use a double % to print the percent sign)
-t MSG_217 "در حال فرمت کردن؛ درصد پیشرفت: %0.1f%%"
-t MSG_218 "در حال ساختن سیستم فایل؛ تعداد وظایف انجام شده: %d/%d"
-t MSG_219 "ایجاد ساختار NTFS Fixup؛ درصد پیشرفت: %d%%"
+t MSG_217 "‫در حال فرمت کردن؛ درصد پیشرفت: %0.1f%%‬"
+t MSG_218 "‫در حال ساختن سیستم فایل؛ تعداد وظایف انجام شده: %d/%d‬"
+t MSG_219 "‫ایجاد ساختار NTFS Fixup؛ درصد پیشرفت: %d%%‬"
 # Parameter: the file system and an estimated duration in mins and secs.
 # eg. "Formatting (UDF) - Estimated duration 3:21..."
 # NB: if "estimated duration" is too long, just use "estimated" or an abbreviation
-t MSG_220 "در حال فرمت کردن (%s)؛ مدت زمان تخمینی: %d:%02d"
-t MSG_221 "در حال نام‌گذاری درایو (ممکن است کمی زمان‌بر باشد)...)"
+t MSG_220 "‫در حال فرمت کردن (%s)؛ زمان تخمینی: %d:%02d‬"
+t MSG_221 "‫در حال نام‌گذاری درایو (ممکن است کمی زمان‌بر باشد)...‬"
 # Parameter: the file system. eg. "Formatting (NTFS)..."
 t MSG_222 "‫در حال فرمت کردن (%s)...‬"
-t MSG_223 "در حال ایجاد ساختار NTFS Fixup (Checkdisk)..."
-t MSG_224 "در حال پاک‌کردن ساختارهای MBR/PBR/GPT..."
-t MSG_225 "در حال درخواست دسترسی به دیسک..."
-t MSG_226 "در حال بررسی رکوردهای راه‌انداز موجود..."
-t MSG_227 "در حال بستن درایوهای موجود..."
+t MSG_223 "‫در حال ایجاد ساختار NTFS Fixup (Checkdisk)...‬"
+t MSG_224 "‫در حال پاک‌کردن ساختارهای MBR/PBR/GPT...‬"
+t MSG_225 "‫در حال درخواست دسترسی به دیسک...‬"
+t MSG_226 "‫در حال بررسی رکوردهای راه‌انداز موجود...‬"
+t MSG_227 "‫در حال بستن درایوهای موجود...‬"
 t MSG_228 "‫در حال نوشتن رکورد راه‌انداز اصلی (MBR)...‬"
 t MSG_229 "‫در حال نوشتن رکورد راه‌انداز پارتیشن (PBR)...‬"
-t MSG_230 "در حال کپی کردن فایل‌های DOS..."
-t MSG_231 "در حال کپی کردن محتویات فایل ISO..."
-t MSG_232 "در حال نصب راه‌انداز EFI ویندوز ۷ (ممکن است کمی زمان‌بر باشد)..."
+t MSG_230 "‫در حال کپی کردن فایل‌های DOS...‬"
+t MSG_231 "‫در حال کپی کردن محتویات فایل ISO...‬"
+t MSG_232 "‫در حال نصب راه‌انداز EFI ویندوز ۷ (ممکن است کمی زمان‌بر باشد)...‬"
 t MSG_233 "‫در حال انجام مرحله نهایی، لطفاً صبور باشید...‬"
 # Takes a Syslinux version as parameter, eg. "Installing Syslinux v5.10..."
-t MSG_234 "در حال نصب Syslinux %s..."
+t MSG_234 "‫در حال نصب Syslinux %s...‬"
 # Bad blocks status. eg: "Bad Blocks: Write pass 1/2 - 12.34% (0/0/1 errors)"
 # See MSG_191/192 for "Write pass"/"Read pass" translation
-t MSG_235 "بررسی بدسکتور: %s %d/%d - %0.2f%% (%d/%d/%d خطاها)"
+t MSG_235 "‫بررسی بدسکتور: %s %d/%d - %0.2f%% (%d/%d/%d خطاها)‬"
 t MSG_236 "بررسی بدسکتور: آزمایش با استفاده از الگوی تصادفی"
-t MSG_237 "بررسی بدسکتور: آزمایش با استفاده از الگوی 0x%02X"
+# Translator Note: From MSG_237 to MSG_241, invisible RLE (at the beginning) and PDF (at the end) are used
+t MSG_237 "‫بررسی بدسکتور: آزمایش با استفاده از الگوی 0x%02X‬"
 # eg. "Partitioning (MBR)..."
-t MSG_238 "در حال پارتیشن‌بندی (%s)..."
-t MSG_239 "در حال حذف پارتیشن‌ها..."
-t MSG_240 "دانلود %s: در حال اتصال..."
-t MSG_241 "در حال دانلود: %0.1f%%"
-t MSG_242 "دانلود فایل ناموفق بود."
-# TRANSLATOR NOTE: In the line below 'RLE' & 'PDF' are used
+t MSG_238 "‫در حال پارتیشن‌بندی (%s)...‬"
+t MSG_239 "‫در حال حذف پارتیشن‌ها...‬"
+t MSG_240 "‫دانلود %s: در حال اتصال...‬"
+t MSG_241 "‫در حال دانلود: %0.1f%%‬"
+t MSG_242 "دانلود فایل ناموفق بود"
+# Translator Note: In the line below invisible RLE (at the beginning) and PDF (at the end) are used
 t MSG_243 "‫در حال بررسی به‌روزرسانی‌های Rufus...‬"
 t MSG_244 "به‌روزرسانی: نرم‌افزار نتوانست به اینترنت وصل شود"
 t MSG_245 "به‌روزرسانی: نرم‌افزار نتوانست به اطلاعات نسخه برنامه دسترسی پیدا کند"
-t MSG_246 "نسخه جدیدی از Rufus موجود است!"
-t MSG_247 "نسخه جدیدی برای Rufus پیدا نشد."
-t MSG_248 "کلیدهای رجیستری برنامه با موفقیت حذف شدند."
-t MSG_249 "حذف کلیدهای رجیستری برنامه ناموفق بود."
+# Translator Note: In the 2 lines below invisible RLE (at the beginning) and PDF (at the end) are used
+t MSG_246 "‫نسخه جدیدی از Rufus موجود است!‬"
+t MSG_247 "‫نسخه جدیدی برای Rufus پیدا نشد‬"
+t MSG_248 "کلیدهای رجیستری برنامه با موفقیت حذف شدند"
+t MSG_249 "حذف کلیدهای رجیستری برنامه ناموفق بود"
 # eg. "Fixed disk detection enabled" "ISO size check disabled"
 t MSG_250 "%s فعال شد."
 t MSG_251 "%s غیرفعال شد."
@@ -15744,7 +15753,7 @@ t MSG_257 "پشتیبانی از سیستم فایل Joliet"
 t MSG_258 "پشتیبانی از سیستم فایل Rock Ridge"
 t MSG_259 "وادار کردن به‌روزرسانی"
 t MSG_260 "فشرده‌سازی NTFS"
-t MSG_261 "در حال نوشتن اطلاعات ایمیج؛ درصد پیشرفت: %0.1f%%"
+t MSG_261 "‫در حال نوشتن اطلاعات ایمیج؛ درصد پیشرفت: %0.1f%%‬"
 # Cheat mode message to disable ISO Support so that only DD images can be opened
 t MSG_262 "پشتیبانی از فایل ISO"
 # Cheat mode to force legacy size units, where 1 KB is 1024 bytes and NOT that fake 1000 bytes abomination!
@@ -15753,11 +15762,13 @@ t MSG_263 "‫نمایش دودویی واحدهای حافظه (‪1 KB = 1024 
 t MSG_264 "در حال حذف کردن پوشه '%s'"
 t MSG_265 "شناسایی دیسک VMWare"
 t MSG_266 "شیوه دوگانه UEFI/BIOS"
+# Translator Note: In the 2 lines below invisible RLE (at the beginning) and PDF (at the end) are used
 t MSG_267 "در حال استفاده از ایمیج ویندوز؛ درصد پیشرفت: %0.1f%%"
-t MSG_268 "در حال استفاده از ایمیج ویندوز..."
+t MSG_268 "‫در حال استفاده از ایمیج ویندوز...‬"
 t MSG_269 "نگه‌داری برچسب زمان (timestamp)"
 t MSG_270 "اشکال‌زدایی (debug) USB"
-t MSG_271 "محاسبه جمع کنترلی (Checksum) ایمیج؛ درصد پیشرفت: %0.1f%%"
+# Translator Note: In the line below invisible RLE (at the beginning) and PDF (at the end) are used
+t MSG_271 "‫محاسبه جمع کنترلی (Checksum) ایمیج؛ درصد پیشرفت: %0.1f%%‬"
 t MSG_272 "محاسبه جمع کنترلی (Checksum) SHA1 و MD5 برای ایمیج انتخاب شده"
 t MSG_273 "تغییر زبان برنامه"
 # TRANSLATOR NOTE: In the line below 'RLE' & 'PDF' are used
