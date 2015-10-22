@@ -55,7 +55,6 @@
 # l "cs-CZ" "Czech (Čeština)" 0x0405
 # l "da-DK" "Danish (Dansk)" 0x0406
 # l "nl-NL" "Dutch (Nederlands)" 0x0413
-# l "fa-IR" "Persian (فارسی)" 0x0429
 # l "fi-FI" "Finnish (Suomi)" 0x040B
 # l "fr-FR" "French (Français)" 0x040c
 # l "de-DE" "German (Deutsch)" 0x0407
@@ -69,6 +68,7 @@
 # l "lt-LT" "Lithuanian (Lietuvių)" 0x0427
 # l "ms-MY" "Malay (Bahasa Malaysia)" 0x043e
 # l "nb-NO" "Norwegian (Norsk)" 0x0414
+# l "fa-IR" "Persian (فارسی)" 0x0429
 # l "pl-PL" "Polish (Polski)" 0x0415
 # l "pt-BR" "Portuguese Brazilian (Português do Brasil)" 0x0416
 # l "pt-PT" "Portuguese Standard (Português)" 0x0816
@@ -841,12 +841,11 @@ t MSG_171 "بدء عملية الفرمتة. \nستم تدمير أية بيان
 t MSG_172 "معلومات الترخيص و اعتراف بالفضل"
 t MSG_173 "إضغط لاختيار..."
 # The following will appear in the about dialog
-# NOTE: In the line below, there are (potentially) invisible Right-To-Left marks
-#       (UTF-8: 0xE2 0x80 0x8f) After "USB" and after "Rufus".
-t MSG_174 "Rufus‏ - أداة فرمتة الـ USB‏ جديرة بالثقة"
-# This one's a massive empirical fest of RTL marks and nonsensical parenthesis, to
-# make the output look about right... If you edit this, all I can say is: GOOD LUCK!!!
-t MSG_175 "إصدار ‏ %d.%d‏)بناء‏ ‏%d‏("
+# NOTE: Because it starts with English text, the line below requires an invisible
+#       RIGHT-TO-LEFT EMBEDDING (UTF-8: 0xE2 0x80 0xAB) at the beginning and a
+#       POP DIRECTIONAL FORMATTING (UTF-8: 0xE2 0x80 0xAC) at the end.
+t MSG_174 "‫Rufus - أداة فرمتة الـ USB جديرة بالثقة‬"
+t MSG_175 "إصدار %d.%d (بناء %d)"
 t MSG_176 "الترجمة العربية: عمر الصمد، تحديث: جلال شفرور (mailto:ch_djalel@yahoo.com)"
 t MSG_177 "إخبار عن مشكلة أو طلب تعديلات على:"
 t MSG_178 "حقوق الطبع والنشر الإضافية:"
@@ -857,7 +856,7 @@ t MSG_181 "نظامك التشغيلي والإصدار"
 t MSG_182 "إصدار البرنامج الذي تستخدمه"
 t MSG_183 "عنوان الـIP الخاص بك"
 t MSG_184 "لغرض إنشاء إحصاءات الإستخدام الخاص, قد نقوم بالحفاظ علي المعلومات التي تم جمعها, "
-	"\\b لسنة واحدة كحدّ أقصى \\b0 . لكننا لن نقوم بالكشف عن أي من هذه البيانات الفردية إلى أطراف ثالثة."
+	"\\b لسنة واحدة كحدّ أقصى\\b0 . لكننا لن نقوم بالكشف عن أي من هذه البيانات الفردية إلى أطراف ثالثة."
 t MSG_185 "إجراء التحديث:"
 t MSG_186 "روفوس لا يقوم بتثبيت أو تشغيل خدمات خلفية, وبالتالي يتم التحقّق من تحديثات فقط عند تشغيل التطبيق الرئيسي. \\line\n"
 	"الإتصال بالإنترنت بالطبع مطلوب عند التحقّق من وجود تحديثات."
@@ -2737,7 +2736,7 @@ t MSG_281 "(Molim odaberite datoteku)"
 
 ################################################################################
 l "cs-CZ" "Czech (Čeština)" 0x0405
-v 1.0.18
+v 1.0.19
 b "en-US"
 
 # Main dialog
@@ -3178,10 +3177,15 @@ t MSG_278 "Typ boot"
 t MSG_279 "Není boot"
 t MSG_280 "Volba obrazu"
 t MSG_281 "(Prosím, vyberte obraz)"
+t MSG_282 "Uzamčení USB disku"
+t MSG_283 "Neplatný podpis"
+t MSG_284 "Schází digitální podpis u staženého programu."
+t MSG_285 "Stažený program je podepsán '%s'.\nTento není jsme si vědomi že muže být "
+	"indikovaná jako škodlivý program aktivita...\nOpravdu chcete spustit tento program?"
 
 ################################################################################
 l "da-DK" "Danish (Dansk)" 0x0406
-v 1.0.18
+v 1.0.19
 b "en-US"
 # Main dialog
 g IDD_DIALOG
@@ -3613,6 +3617,11 @@ t MSG_278 "Opstartstype"
 t MSG_279 "Ikke startbar"
 t MSG_280 "Diskbillede"
 t MSG_281 "(Vælg et diskbillede)"
+t MSG_282 "Isoleret USB-lukning"
+t MSG_283 "Ugyldig signatur"
+t MSG_284 "Den hentede fil mangler en digital signatur."
+t MSG_285 "Den hentede fil er signeret af '%s'.\nDet er ikke en signatur vi genkender og det kan tyde "
+	"på at der er en form for ondsindet aktivitet...\nEr du sikker på at du vil køre denne fil?"
 
 ################################################################################
 l "nl-NL" "Dutch (Nederlands)" 0x0413, 0x0813
@@ -4069,7 +4078,7 @@ t MSG_281 "(Selecteer a.u.b. een image)"
 
 ################################################################################
 l "fi-FI" "Finnish (Suomi)" 0x040B
-v 1.0.18
+v 1.0.19
 b "en-US"
 
 # Main dialog
@@ -4510,6 +4519,11 @@ t MSG_278 "Käynnistystyyppi"
 t MSG_279 "Ei-boottaava"
 t MSG_280 "Levykuvan valinta"
 t MSG_281 "(Valitse levykuva)"
+t MSG_282 "USB-aseman eksklusiivinen käyttö"
+t MSG_283 "Epäkelpo allekirjoitus"
+t MSG_284 "Ladatusta tiedostosta puuttuu digitaalinen allekirjoitus."
+t MSG_285 "Ladatun tiedoston on allekirjoittanut '%s'.\nEmme tunnista kyseistä allekirjoitusta, mikä "
+	"saattaa viitata haitalliseen toimintaan...\nHaluatko varmasti suorittaa tämän tiedoston?"
 
 ################################################################################
 l "fr-FR" "French (Français)" 0x040c, 0x080c, 0x0c0c, 0x100c, 0x140c, 0x180c, 0x1c0c, 0x200c, 0x240c, 0x280c, 0x2c0c, 0x300c, 0x340c, 0x380c, 0xe40c
@@ -4932,7 +4946,7 @@ t MSG_285 "L'exécutable téléchargé est signé par '%s'.\nCe n’est pas une 
 
 ################################################################################
 l "de-DE" "German (Deutsch)" 0x0407, 0x0807, 0x0c07, 0x1007, 0x1407
-v 1.0.18
+v 1.0.19
 b "en-US"
 
 g IDD_DIALOG
@@ -5369,6 +5383,11 @@ t MSG_278 "Startart"
 t MSG_279 "Nicht startfähig"
 t MSG_280 "Abbildauswahl"
 t MSG_281 "(Bitte wählen Sie ein Abbild)"
+t MSG_282 "Exclusive Sperre für das USB-Laufwerk"
+t MSG_283 "Ungültige Signatur"
+t MSG_284 "Die heruntergeladene ausführbare Datei verfügt über keine Signatur."
+t MSG_285 "Die heruntergeladene ausführbare Datei ist von '%s' signiert.\nDiese Signatur ist nicht akzeptiert und könnte "
+	"auf eine böswillige Aktivität hindeuten...\nSind Sie sicher, dass Sie diese Datei ausführen wollen?"
 
 ################################################################################
 l "el-GR" "Greek (Ελληνικά)" 0x0408
@@ -5628,7 +5647,7 @@ t MSG_098 "ΣΗΜΑΝΤΙΚΟ: Προσπαθείτε να εγκαταστήσ�
 	"\n\nΕίστε σίγουροι ότι θέλετε να συνεχίσετε?\n\n"
 	"Σημείωση: Το χαρακτηριστικό 'ΣΤΑΘΕΡΟΣ / ΑΦΑΙΡΟΥΜΕΝΟΣ' ενός δίσκου είναι μια ιδιότητα που "
 	"μπορεί να αλλάξει μόνο χρησιμοποιώντας προσαρμοσμένα εργαλεία από τον κατασκευαστή της μονάδας. "
-	"Ωστόσο, τα εργαλεία αυτά δεν διατίθενται στο κοινό."
+	"Ωστόσο, τα εργαλεία αυτά δεν διατίθενται στο κοινό."	
 t MSG_099 "Περιορισμός του συστήματος αρχείων"
 t MSG_100 "Αυτό το είδωλο ISO περιέχει ένα αρχείο μεγαλύτερο από 4 GB, το οποίο είναι μεγαλύτερο "
 	"από το μέγιστο επιτρεπόμενο μέγεθος για το σύστημα αρχείων FAT ή FAT32. "
@@ -6759,7 +6778,7 @@ t MSG_281 "(Silakan pilih sebuah image)"
 
 ################################################################################
 l "it-IT" "Italian (Italiano)" 0x0410, 0x0810
-v 1.0.18
+v 1.0.19
 b "en-US"
 
 g IDD_DIALOG
@@ -7182,6 +7201,11 @@ t MSG_278 "Tipo boot"
 t MSG_279 "Non avviabile"
 t MSG_280 "Selezione immagine"
 t MSG_281 "(seleziona un'immagine)"
+t MSG_282 "Blocco esclusivo unità USB"
+t MSG_283 "Firma non valida"
+t MSG_284 "L'eseguibile scaricato non ha una firma digitale."
+t MSG_285 "L'eseguibile scaricato è firmato da '%s'.\nQuesta non è una firma riconosciuta e potrebbe "
+	"indicare qualche forma di attività malevola.\nSei sicuro di voler eseguire questo file?"
 
 ######################################################################
 l "ja-JP" "Japanese (日本語)" 0x0411
@@ -8087,7 +8111,7 @@ t MSG_281 "(이미지를 선택하세요)"
 
 ################################################################################
 l "lv-LV" "Latvian (Latviešu)" 0x0426
-v 1.0.18
+v 1.0.19
 b "en-US"
 
 # Main dialog
@@ -8546,6 +8570,11 @@ t MSG_278 "Ielādes veids"
 t MSG_279 "Neielādējams imidžs"
 t MSG_280 "Imidža izvēle"
 t MSG_281 "(Lūdzu, izvēlieties imidžu)"
+t MSG_282 "Ekskluzīva USB nesēja slēgšana"
+t MSG_283 "Nederīgs paraksts"
+t MSG_284 "Ielādētajam izpildfailam ir kļūdains ciparu paraksts."
+t MSG_285 "Ielādētais izpildfails parakstīts kā '%s'.\nTas ir neatpazīts paraksts un iespējams, "
+	"var radīt aizdomīgas aktivitātes...\nVai tiešām vēlaties izpildīt šo failu?"
 
 ################################################################################
 l "lt-LT" "Lithuanian (Lietuvių)" 0x0427
@@ -10769,7 +10798,7 @@ t MSG_285 "O executável baixado é assinado por '%s'.\nEsta assinatura não é 
 
 ################################################################################
 l "pt-PT" "Portuguese Standard (Português)" 0x0816
-v 1.0.18
+v 1.0.19
 b "en-US"
 
 # Main dialog
@@ -11221,6 +11250,11 @@ t MSG_278 "Tipo de arranque"
 t MSG_279 "Não inicializável"
 t MSG_280 "Seleção da Imagem"
 t MSG_281 "(Selecione a imagem)"
+t MSG_282 "Bloqueio exclusivo do dispositivo USB"
+t MSG_283 "Assinatura inválida"
+t MSG_284 "No executável transferido está a faltar uma assinatura digital."
+t MSG_285 "O executável transferido está assinado por '%s'.\nNão é uma assinatura reconhecida e "
+	"poderá indicar algum tipo de actividade mal intencionada...\nTem certeza de que deseja executar este ficheiro?"
 
 ################################################################################
 l "ro-RO" "Romanian (Română)" 0x0418, 0x0818
@@ -11641,7 +11675,7 @@ t MSG_285 "Executabilul descărcat este semnat de către '%s'.\nAceasta nu este 
 
 ################################################################################
 l "ru-RU" "Russian (Русский)" 0x0419, 0x0819
-v 1.0.18
+v 1.0.19
 b "en-US"
 
 # Main dialog
@@ -11786,7 +11820,7 @@ t MSG_041 "Операция прервана пользователем"
 t MSG_042 "Ошибка"
 t MSG_043 "Ошибка: %s"
 t MSG_044 "Скачивание файла"
-t MSG_045 "USB-устройство хранения данных"
+t MSG_045 "USB устройство хранения данных"
 t MSG_046 "%s (Диск %d) [%s]"
 t MSG_047 "Несколько разделов"
 t MSG_048 "Буфер"
@@ -11825,8 +11859,8 @@ t MSG_076 "Невозможно пропатчить установочные ф
 t MSG_077 "Невозможно назначить букву диска."
 t MSG_078 "Невозможно смонтировать GUID-том."
 t MSG_079 "Устройство не готово."
-t MSG_080 "Rufus обнаружил, что все еще Windows очищает внутренний буфер USB-устройства.\n\n"
-	"В зависимости от скорости вашего USB-устройства, эта операция может занять много времени, "
+t MSG_080 "Rufus обнаружил, что все еще Windows очищает внутренний буфер USB устройства.\n\n"
+	"В зависимости от скорости вашего USB устройства, эта операция может занять много времени, "
 	"особенно для больших файлов.\n\nДождитесь пока Windows закончит, чтобы избежать повреждения устройства. "
 	"Но если вы устали от ожидания, можете просто отключить устройство..."
 t MSG_081 "Неподдерживаемый образ"
@@ -11869,7 +11903,7 @@ t MSG_098 "ВАЖНО: Вы пытаетесь установить 'Windows To 
 t MSG_099 "Ограничения файловой системы"
 t MSG_100 "Этот ISO-образ содержит файл размером более 4 Гб, что недопустимо при использовании файловой системы FAT или FAT32"
 t MSG_101 "Отсутствует поддержка WIM"
-t MSG_102 "Ваша система не может извлекать файлы из WIM-архивов, но это необходимо для создания загрузочного USB-диска с Windows 7 или Windows Vista."
+t MSG_102 "Ваша система не может извлекать файлы из WIM-архивов, но это необходимо для создания загрузочного USB диска с Windows 7 или Windows Vista."
 	"Вы можете исправить это установив последнюю версию 7-Zip"\nХотите посетить страницу загрузки 7-zip?"
 t MSG_103 "Загрузить %s?"
 t MSG_104 "%s или поздней версии требует наличия '%s'.\n"
@@ -11922,13 +11956,13 @@ t MSG_159 "Запись новой метки тома\nПоддерживают
 t MSG_160 "Развернуть дополнительные параметры"
 t MSG_161 "Проверка устройства на наличие плохих (поврежденных) блоков с помощью таблицы байтов"
 t MSG_162 "Быстрое форматирование устройства"
-t MSG_163 "Создать загрузочный USB-диск"
+t MSG_163 "Создать загрузочный USB диск"
 t MSG_164 "Метод загрузки"
 t MSG_165 "Нажмите, чтобы выбрать образ..."
 t MSG_166 "Разрешить отображение меток с международными символами и задать значок устройства\n(Создается autorun.inf)"
 t MSG_167 "Использовать MBR, который разрешает выбор загрузчика и может маскироваться под идентификатором устройства в BIOS"
 t MSG_168 "Попробуйте замаскировать первый загрузочный\n"
-	"USB-диск (обычно 0x80) как другой диск.\n"
+	"USB диск (обычно 0x80) как другой диск.\n"
 	"Это необходимо для установки только Windows XP.\n"
 t MSG_169 "Добавить дополнительный скрытый раздел и выравнить границы разделов.\n"
 	"Это поможет улучшить обнаружение загрузчика в старых версия BIOS."
@@ -12054,7 +12088,7 @@ t MSG_266 "Двойной UEFI/BIOS режим"
 t MSG_267 "Использование Windows-образа: %0.1f%% завершено"
 t MSG_268 "Использование Windows-образа..."
 t MSG_269 "Сохранять метки"
-t MSG_270 "Режим USB-отладки"
+t MSG_270 "Режим USB отладки"
 t MSG_271 "Вычисление контрольных сумм: %0.1f%% завершено"
 t MSG_272 "Вычислить контрольные суммы MD5, SHA1 и SHA256 для выбранного образа"
 t MSG_273 "Изменить язык приложения"
@@ -12069,6 +12103,11 @@ t MSG_278 "Тип загрузки"
 t MSG_279 "Незагрузочный образ"
 t MSG_280 "Выбор образа"
 t MSG_281 "(Пожалуйста, выберите образ)"
+t MSG_282 "Особая блокировка USB диска"
+t MSG_283 "Неверная подпись"
+t MSG_284 "У загруженного файла отсутствует цифровая подпись."
+t MSG_285 "Загруженный файл подписан '%s'.\nЭто не та подпись, которая признается, что "
+	"указывает на некоторые формы вредоносных действий...\nВы уверены, что хотите запустить этот файл?"
 
 ################################################################################
 l "sk-SK" "Slovak (Slovensky)" 0x041B
@@ -12512,7 +12551,7 @@ t MSG_281 "(Vyberte obraz)"
 
 ################################################################################
 l "sl-SI" "Slovene (Slovenščina)" 0x0424
-v 1.0.18
+v 1.0.19
 b "en-US"
 
 # Main dialog
@@ -12945,6 +12984,11 @@ t MSG_278 "Način zagona"
 t MSG_279 "Nezagonska"
 t MSG_280 "Izbira slike"
 t MSG_281 "(Izberite sliko)"
+t MSG_282 "Ekskluzivno zaklepanje nosilca USB"
+t MSG_283 "Neveljaven podpis"
+t MSG_284 "Prenesena datoteka nima digitalnega podpisa."
+t MSG_285 "Oseba, ki je podpisala preneseno datoteko, je '%s'.\nTa podpis se ne ujema s pričakovanim, kar lahko pomeni, "
+	"da je to zlonamerna datoteka, ki jo vam je nekdo podtaknil.\nAli ste prepričani, da jo želite zagnati?" 
 
 ################################################################################
 l "es-ES" "Spanish (Español)" 0x040a, 0x080a, 0x0c0a, 0x100a, 0x140a, 0x180a, 0x1c0a, 0x200a, 0x240a, 0x280a, 0x2c0a, 0x300a, 0x340a, 0x380a, 0x3c0a, 0x400a, 0x440a, 0x480a, 0x4c0a, 0x500a, 0x540a, 0x580a
@@ -13417,7 +13461,7 @@ t MSG_285 "El ejecutable descargado está firmado por '%s'.\nNo reconocemos este
 
 ################################################################################
 l "sv-SE" "Swedish (Svenska)" 0x041d, 0x081d
-v 1.0.18
+v 1.0.19
 b "en-US"
 
 # Main dialog
@@ -13735,7 +13779,7 @@ t MSG_171 "Starta formateringen.\nDetta kommer att RADERA all data på målenhet
 t MSG_172 "Licensinformation och beröm"
 t MSG_173 "Tryck för att välja..."
 # The following will appear in the about dialog
-t MSG_174 "Rufus - Det pålitliga USB-formateringsverktyget"
+t MSG_174 "Rufus - Det pålitliga verktyget för USB-formatering"
 t MSG_175 "Version %d.%d (Build %d)"
 t MSG_176 "Svensk översättning: Sopor <mailto:sopor@hotmail.com>"
 t MSG_177 "Rapportera fel eller om du har några idéer:"
@@ -13874,10 +13918,15 @@ t MSG_278 "Starttyp"
 t MSG_279 "Icke startbar"
 t MSG_280 "Avbildsväljare"
 t MSG_281 "(Välj en avbild)"
+t MSG_282 "Exklusiv låsning av USB-enheten"
+t MSG_283 "Ogiltig signatur"
+t MSG_284 "Den nedladdade körbara filen saknar digital signatur."
+t MSG_285 "Den nedladdade körbara filen är signerad av '%s'.\nDetta är inte en signatur vi känner igen och "
+	"detta kan tyda på någon form av skadlig aktivitet...\nÄr du säker på att du vill köra filen?"
 
 ################################################################################
 l "tr-TR" "Turkish (Türkçe)" 0x041F
-v 1.0.18
+v 1.0.19
 b "en-US"
 
 # Main dialog
@@ -14348,10 +14397,15 @@ t MSG_278 "Önyükleme türü"
 t MSG_279 "Önyüklenebilir değil"
 t MSG_280 "Yansıma seçimi"
 t MSG_281 "(Lütfen bir yansıma seçin)"
+t MSG_282 "Özel USB sürücü kilitleme"
+t MSG_283 "Geçersiz imza"
+t MSG_284 "İndirilen yürütülebilir dosyanın dijital imzası eksik."
+t MSG_285 "İndirilen yürütülebilir dosya '%s' tarafından imzalanmış.\nBu tanımlayabildiğimiz ve kötü niyetli "
+	"etkinliğini belirtebileceğimiz bir imza değil...\nBu dosyayı çalıştırmak istediğinize emin misiniz?"
 
 ################################################################################
 l "uk-UA" "Ukrainian (Українська)" 0x0422
-v 1.0.18
+v 1.0.19
 b "en-US"
 
 # Main dialog
@@ -14798,6 +14852,11 @@ t MSG_278 "Тип завантаження"
 t MSG_279 "Незавантажувальний образ"
 t MSG_280 "Вибір образа"
 t MSG_281 "(Будь ласка, оберіть образ)"
+t MSG_282 "Особливе блокування USB-диску"
+t MSG_283 "Невірний підпис"
+t MSG_284 "У завантаженого файлу відсутній цифровий підпис."
+t MSG_285 "Завантажений файл підписаний '%s'.\nЦе не той підпис, який визнається, "
+  "що вказує на деякі форми шкідливих дій...\nВи впевнені, що хочете запустити цей файл?"
 
 ################################################################################
 l "vi-VN" "Vietnamese (Tiếng Việt)" 0x042A
