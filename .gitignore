@@ -3,9 +3,5 @@
 *.iso
 *.psd
 *.txt
-<<<<<<< HEAD
-=======
 *.log
->>>>>>> refs/remotes/origin/master
-Bugs.found
 Test
