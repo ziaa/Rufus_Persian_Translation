@@ -15292,7 +15292,7 @@ t IDS_CLUSTERSIZE_TXT "اندازه کلاستر"
 t IDS_LABEL_TXT "نام دلخواه برای درایو USB موردنظر"
 t IDS_FORMAT_OPTIONS_GRP "گزینه‌ها و تنظیمات"
 # Note: The button (IDC_ADVANCED) that appears next to "Format Options" is repositioned automatically.
-t IDC_BADBLOCKS "بررسی وجود بدسکتور در درایو به شیوه"
+t IDC_BADBLOCKS "بررسی وجود بدسکتور در درایو به روشِ"
 t IDC_QUICKFORMAT "فرمت کردن سریع (Quick format)"
 t IDC_BOOT "ساخت درایو راه‌انداز (Bootable) با استفاده از"
 t IDC_WINDOWS_INSTALL "نصب ویندوز به روش استاندارد و رایج"
@@ -15588,10 +15588,10 @@ t MSG_116 "این ایمیج (Image) از «Grub %s» استفاده می‌کن
 # Tooltips
 # Partition Scheme and Target Type
 t MSG_150 "معمولاً مطمئن‌ترین انتخاب همین گزینه است. اما اگر رایانه شما UEFI دارد و شما می‌خواهید "
-	"از حالت native EFI برای نصب سیستم‌عامل استفاده کنید؛ بهتر است گزینه دیگری را انتخاب کنید."
-t MSG_151 "اگر می‌خواهید از حالت native EFI برای نصب سیستم‌عامل استفاده کنید و "
+	"در حالت native EFI اقدام به نصب سیستم‌عامل کنید؛ بهتر است گزینه دیگری را انتخاب کنید."
+t MSG_151 "اگر می‌خواهید در حالت native EFI اقدام به نصب سیستم‌عامل کنید و "
 	"نیاز دارید که در ویندوز XP به محتویات درایو USB دسترسی داشته باشید؛ از این گزینه استفاده کنید."
-t MSG_152 "اگر می‌خواهید از حالت native EFI برای نصب سیستم‌عامل استفاده کنید و "
+t MSG_152 "اگر می‌خواهید در حالت native EFI اقدام به نصب سیستم‌عامل کنید و "
 	"نیازی به دسترسی به درایو USB در ویندوز XP ندارید؛ بهتر است این گزینه را انتخاب کنید."
 t MSG_153 "الگوی آزمایش: 0x%02X"
 t MSG_154 "الگوی آزمایش: 0x%02X, 0x%02X"
@@ -15761,7 +15761,7 @@ t MSG_262 "پشتیبانی از فایل ISO"
 t MSG_263 "‫نمایش دودویی واحدهای حافظه (‪1 KB = 1024 bytes‬)‬"
 t MSG_264 "در حال حذف کردن پوشه '%s'"
 t MSG_265 "شناسایی دیسک VMWare"
-t MSG_266 "شیوه دوگانه UEFI/BIOS"
+t MSG_266 "روش دوگانه UEFI/BIOS"
 # Translator Note: In the 2 lines below invisible RLE (at the beginning) and PDF (at the end) are used
 t MSG_267 "در حال استفاده از ایمیج ویندوز؛ درصد پیشرفت: %0.1f%%"
 t MSG_268 "‫در حال استفاده از ایمیج ویندوز...‬"
@@ -15775,14 +15775,14 @@ t MSG_273 "تغییر زبان برنامه"
 t MSG_274 "‫ایمیج ISOHybrid شناسایی شد‬"
 # '%s' below will be replaced with your translations for MSG_036 ("ISO Image") and MSG_095 ("DD Image")
 t MSG_275 "ایمیجی که شما انتخاب کرده‌اید از نوع «ISOHybrid» است. به این معنی که این فایل می‌تواند "
-	"‫‫به شیوه «%s (کپی کردن فایل)» یا «%s (ایمیج دیسک)» نوشته شود.‬ \n"
-	"Rufus استفاده از شیوه «%s» را پیشنهاد می‌کند. در این شیوه پس از نوشتن اطلاعات در درایو، شما همیشه دسترسی کاملی به درایو خواهید داشت. \n"
-	"با این حال، اگر هنگام راه‌اندازی (boot) سیستم‌عامل با مشکلی برخورد کردید؛ شما می‌توانید دوباره نوشتن اطلاعات به شیوه «%s» را امتحان کنید.\n\n"	
+	"‫‫به روش «%s (کپی کردن فایل)» یا «%s (ایمیج دیسک)» نوشته شود.‬ \n"
+	"Rufus استفاده از روش «%s» را پیشنهاد می‌کند. در این روش پس از نوشتن اطلاعات در درایو، شما همیشه دسترسی کاملی به درایو خواهید داشت. \n"
+	"با این حال، اگر هنگام راه‌اندازی (boot) سیستم‌عامل با مشکلی برخورد کردید؛ شما می‌توانید دوباره نوشتن اطلاعات به روش «%s» را امتحان کنید.\n\n"	
 	"لطفاً شیوه‌ای را که می‌خواهید با استفاده از آن اطلاعات ایمیج نوشته شود؛ انتخاب کنید."
 # '%s' below will be replaced with your translation for MSG_036 ("ISO Image")
-t MSG_276 "نوشتن به شیوه «%s» (پیشنهاد برنامه)"
+t MSG_276 "نوشتن به روش «%s» (پیشنهاد برنامه)"
 # '%s' below will be replaced with your translation for MSG_095 ("DD Image")
-t MSG_277 "نوشتن به شیوه «%s»"
+t MSG_277 "نوشتن به روش «%s»"
 # The following will be used for new controls of the Rufus 3.0 interface
 # They are added as messages, so that I will have them available when needed.
 # 278 & 280 will be dropdown titles, similar to how IDS_DEVICE_TXT or IDS_PARTITION_TYPE_TXT are used
