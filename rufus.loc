@@ -60,6 +60,7 @@
 # l "fr-FR" "French (Français)" 0x040c
 # l "de-DE" "German (Deutsch)" 0x0407
 # l "el-GR" "Greek (Ελληνικά)" 0x0408
+# l "he-IL" "Hebrew (עברית)" 0x040d
 # l "hu-HU" "Hungarian (Magyar)" 0x040e
 # l "id-ID" "Indonesian (Bahasa Indonesia)" 0x0421
 # l "it-IT" "Italian (Italiano)" 0x0410
@@ -77,7 +78,7 @@
 # l "ru-RU" "Russian (Русский)" 0x0419
 # l "sr-SP" "Serbian (Latin)" 0x241a
 # l "sk-SK" "Slovak (Slovensky)" 0x041B
-# l "sl-SI" "Slovene (Slovenščina)" 0x0424
+# l "sl-SI" "Slovenian (Slovenščina)" 0x0424
 # l "es-ES" "Spanish (Español)" 0x040a
 # l "sv-SE" "Swedish (Svenska)" 0x041d
 # l "th-TH" "Thai (ไทย)" 0x041e
@@ -92,7 +93,7 @@
 # http://download.microsoft.com/download/9/5/E/95EF66AF-9026-4BB0-A41D-A4F81802D92C/%5BMS-LCID%5D.pdf
 # for the LCID (0x####) codes you should use
 l "en-US" "English (English)" 0x0409, 0x0809, 0x0c09, 0x1009, 0x1409, 0x1809, 0x1c09, 0x2009, 0x2409, 0x2809, 0x2c09, 0x3009, 0x3409, 0x3809, 0x3c09, 0x4009, 0x4409, 0x4809
-v 1.0.20
+v 1.0.21
 
 # Main dialog
 g IDD_DIALOG
@@ -549,6 +550,13 @@ t MSG_285 "The downloaded executable is signed by '%s'.\nThis is not a signature
 	"indicate some form of malicious activity...\nAre you sure you want to run this file?"
 t MSG_286 "Zeroing drive: %0.1f%% completed"
 t MSG_287 "Detection of non-USB removable drives"
+t MSG_288 "Missing elevated privileges"
+t MSG_289 "This application can only run with elevated privileges"
+t MSG_290 "File Indexing"
+t MSG_291 "Version selection"
+t MSG_292 "Please select the version of Windows you want to install:"
+t MSG_293 "Unsupported Windows version"
+t MSG_294 "This version of Windows is no longer supported by Rufus."
 
 ################################################################################
 ############################# TRANSLATOR END COPY ##############################
@@ -989,7 +997,7 @@ t MSG_281 "(فضلا اختر صورة)"
 
 ################################################################################
 l "az-AZ" "Azerbaijani (Azərbaycanca)" 0x042c, 0x782c
-v 1.0.19
+v 1.0.20
 b "en-US"
 
 # Main dialog
@@ -1465,10 +1473,12 @@ t MSG_283 "Keçərsiz imza"
 t MSG_284 "Yüklənən aparıla faylın rəqəmsal imzası çatmır."
 t MSG_285 "Yüklənən aparıla bilən fayl '%s' tərəfindən imzalanmışdır.\nBu tərifə və pis niyyətli "
 	"səmərəliliyini qeyd edəcəyimiz bir imza deyil...\nBu faylı işlətmək istədiyinizə əminsiniz?"
+t MSG_286 "Sürücü sıfırlama: %0.1f%% tamamlandı"
+t MSG_287 "Olmayan çıxarılabilən USB sürücülər"
 
 ######################################################################
 l "bg-BG" "Bulgarian (Български)" 0x0402
-v 1.0.19
+v 1.0.20
 b "en-US"
 
 # Main dialog
@@ -1945,10 +1955,12 @@ t MSG_283 "Нежалиден подпис"
 t MSG_284 "Изтегленото приложение е без дигитален подпис."
 t MSG_285 "Изтегленото приложение е с подпис от '%s'.\nТова не е познат дигитален подпис и може да "
 	"е признак на злонамерена дейност...\nСигурни ли сте че искате да стартирате тази програма?
+t MSG_286 "Нулиране на устройството: %0.1f%% завършено"
+t MSG_287 "Откриване на преносими устройства не изпозващи USB"
 
 ################################################################################
 l "zh-CN" "Chinese Simplified (简体中文)" 0x0804, 0x1004
-v 1.0.19
+v 1.0.20
 b "en-US"
 
 # Main dialog
@@ -2071,7 +2083,7 @@ t MSG_028 "M 字节"
 t MSG_029 "默认"
 # The following gets appended to the file system, cluster size, etc.
 t MSG_030 "%s (默认)"
-t MSG_031 "用于 BIOS 或 %s 计算机的 %s 分区方案"
+t MSG_031 "%s 分区方案 用于 BIOS 或 %s 的计算机"
 t MSG_032 "用于 BIOS 计算机的 %s 分区方案"
 t MSG_033 "用于 UEFI 计算机的 %s 分区方案"
 # Number of bad block check passes (singular for 1 pass, plural for 2 or more passes)
@@ -2385,10 +2397,12 @@ t MSG_282 "独占 USB 驱动器锁定"
 t MSG_283 "无效签名"
 t MSG_284 "已下载的可执行文件缺少一个数字签名。"
 t MSG_285 "已下载的可执行文件是由 '%s' 签署的。\n这个不是我们能够识别的签名，而且这个可能意味着某种形式的恶意活动...\n您是否确认您想运行这个文件?"
+t MSG_286 "正在清空磁盘: %0.1f%% 已完成"
+t MSG_287 "检测非USB的可移除设备"
 
 ################################################################################
 l "zh-TW" "Chinese Traditional (正體中文)" 0x0404, 0x0c04, 0x1404, 0x7c04
-v 1.0.19
+v 1.0.21
 b "en-US"
 
 # Main dialog
@@ -2798,10 +2812,19 @@ t MSG_282 "鎖定 USB 磁碟"
 t MSG_283 "無效簽章"
 t MSG_284 "下載的檔案缺少數位簽章。"
 t MSG_285 "下載的檔案簽章者為: '%s'.\n本軟體未使用此簽章，代表檔案可能已遭受病毒感染...\n是否要執行檔案?"
+t MSG_286 "寫入零: 已完成 %0.1f%%"
+t MSG_287 "偵測非USB可移除磁碟"
+t MSG_288 "缺少較高的權限"
+t MSG_289 "此程式只能以較高的權限執行"
+t MSG_290 "檔案索引屬性"
+t MSG_291 "版本選擇"
+t MSG_292 "請選擇你要安裝的 Windows 版本:"
+t MSG_293 "不支援的 Windows 版本"
+t MSG_294 "Rufus 已不再支援此 Windows 版本。"
 
 ################################################################################
 l "hr-HR" "Croatian (Hrvatski)" 0x041a, 0x081a, 0x101a
-v 1.0.19
+v 1.0.20
 b "en-US"
 
 # Main dialog
@@ -3234,10 +3257,12 @@ t MSG_283 "Nevažeći potpis"
 t MSG_284 "Preuzeta aplikacija ne sadrži digitalni potpis."
 t MSG_285 "Preuzeta aplikacija je potpisana od strane ‘%s’.\nOvo nije prepoznatljiv izvor "
 	"i može biti zlonamjeran...\nŽelite li svejedno pokrenuti program?"
+t MSG_286 "Čišćenje uređaja: %0.1f%% završeno"
+t MSG_287 "Prikazivanje ostalih uklonjivih medija"	
 
 ################################################################################
 l "cs-CZ" "Czech (Čeština)" 0x0405
-v 1.0.19
+v 1.0.21
 b "en-US"
 
 # Main dialog
@@ -3255,17 +3280,17 @@ t IDS_LABEL_TXT "Nový název svazku"
 t IDS_FORMAT_OPTIONS_GRP "Nastavení formátování"
 t IDC_BADBLOCKS "Zkontrolovat chybné bloky"
 t IDC_QUICKFORMAT "Rychlé formátování"
-t IDC_BOOT "Vytvořit spouštěcí disk"
+t IDC_BOOT "Vytvořit zaváděcí disk"
 t IDC_WINDOWS_INSTALL "Standartní instalace Windows"
-t IDC_WINDOWS_TO_GO "Přenosný Windows"
+t IDC_WINDOWS_TO_GO "Přenosný systém Windows"
 t IDC_SET_ICON "Vytvořit soubory s jmenovkou a ikonou svazku"
 t IDC_ABOUT "O programu..."
 t IDC_LOG "Záznam"
 t IDCANCEL "Zavřít"
 t IDC_START "Spustit"
 t IDS_ADVANCED_OPTIONS_GRP "Pokročilé možnosti formátování "
-t IDC_ENABLE_FIXED_DISKS "Zobrazit seznam USB pevných disků"
-t IDC_EXTRA_PARTITION "Přidat opravy pro staré BIOSy"
+t IDC_ENABLE_FIXED_DISKS "Zobrazit seznam USB disků"
+t IDC_EXTRA_PARTITION "Přidat opravy pro starší verze BIOSu"
 t IDC_RUFUS_MBR "Použít Rufus MBR s BIOS ID"
 
 # About dialog
@@ -3312,7 +3337,7 @@ t IDCANCEL "Zavřít"
 g IDD_NEW_VERSION
 t IDD_NEW_VERSION "Kontrola aktualizací - Rufus"
 t IDS_NEW_VERSION_AVAIL_TXT "Je dostupná nová verze. Stáhněte si poslední verzi!"
-t IDC_WEBSITE "Klepnutím přejdete na webové stránky aplikace"
+t IDC_WEBSITE "Kliknutím přejdete na webové stránky aplikace"
 t IDS_NEW_VERSION_NOTES_GRP "Poznámky k vydání"
 t IDS_NEW_VERSION_DOWNLOAD_GRP "Stažení"
 t IDC_DOWNLOAD "Stáhnout"
@@ -3322,7 +3347,7 @@ t IDCANCEL "Zavřít"
 t MSG_001 "Zjištěna běžící instance aplikace"
 t MSG_002 "Program Rufus je již spuštěný.\n"
 	"Prosím zavřete běžící aplikaci před opětovným spuštěním"
-t MSG_003 "VAROVÁNÍ: VŠECHNA DATA NA CÍLOVÉM DISKU %s. BUDOU VYMAZÁNA\n"
+t MSG_003 "VAROVÁNÍ: VŠECHNA DATA NA CÍLOVÉM DISKU %s. BUDOU SMAZÁNA\n"
 	"Chcete-li pokračovat v této operaci, klikněte na tlačítko OK.\nPro zrušení klikněte na tlačítko ZRUŠIT."
 t MSG_004 "Nastavení automatických aktualizací"
 t MSG_005 "Chcete povolit online kontrolu aktualizací programu Rufus?"
@@ -3335,7 +3360,7 @@ t MSG_010 "Byly nalezeny chybné bloky"
 t MSG_011 "Kontrola dokončena:\n  počet chybných bloků: %d \n"
 	"  počet chyb čtení: %d\n  počet chyb při zápisu: %d\n  počet zjištěných poškození: %d\n"
 # The following will contain the formatted message above as well as the name of the bad blocks logfile
-t MSG_012 "%s\nPodrobnější zprávu najdete tady:\n%s"
+t MSG_012 "%s\nPodrobnější zprávu najdete zde:\n%s"
 t MSG_013 "Zakázáno"
 t MSG_014 "Denně"
 t MSG_015 "Týdně"
@@ -3417,8 +3442,8 @@ t MSG_080 "Program Rufus zjistil, že Windows stále vyprázdňuje interní vyro
 	"Dokončení této operace může trvat dlouho, v závislosti na rychlosti vašeho USB zařízení, "
 	"zvláště u velkých souborů.\n\nDoporučujeme nechat Windows dokončit akci, zabráníte tak poškození dat."
 	"Pokud už nechcete dále čekat, můžete zařízení odpojit..."
-t MSG_081 "Nepodporovaná image"
-t MSG_082 "Tento obráz není bootovací, nebo používá metodu spuštění anebo kompresi, která není podporován Rufusem ..."
+t MSG_081 "Nepodporovaný obraz"
+t MSG_082 "Tento obraz není bootovací, nebo používá metodu spuštění anebo kompresi, která není podporován Rufusem ..."
 t MSG_083 "Nahradit %s?"
 t MSG_084 "Zdá se, že tento ISO obraz používá zastaralou verzi '%s'.\n"
 	"Nabídka boot systému se proto nemusí zobrazovat správně.\n\n"
@@ -3448,12 +3473,12 @@ t MSG_095 "Obraz DD"
 t MSG_096 "Souborový systém aktuálně vybraný nelze použít u tohoto typu ISO."
   "Prosím, vyberte jiný souborový systém, nebo použijte jiné ISO."
 t MSG_097 "'%s' lze použít pouze v případě, že souborový systém je NTFS."
-t MSG_098 "DŮLEŽITÉ: Pokoušíte se nainstalovat 'Přenosný Windows', ale váš cílový disk "
+t MSG_098 "DŮLEŽITÉ: Pokoušíte se nainstalovat 'Přenosný systém Windows', ale váš cílový disk "
 	"má 'PEVNÝ' atribut. Vzhledem k tomuto systému Windows bude s největší pravděpodobností zamrzat během spouštění, "
-	"Microsoft není určen pro práce s 'VYMĚNITELNÝMI' disky, které místo toho mají "
+	"Microsoft nepodporuje práce s 'VYMĚNITELNÝMI' disky, které mají tento "
 	"atribut.\n\npřesto chcete pokračovat?\n\n"
-	"Poznámka: 'PEVNÁ/ODNIMATELNÁ' atribut má hardwarové vlastnosti, které lze změnit pouze "
-	"pomocí vlastních nástrojů od výrobce disku. Nicméně tyto nástroje nejsou SKORO NIKDY "
+	"Poznámka: 'PEVNÝ/VYMĚNITELNÝ' atribut má hardwarové vlastnosti, které lze změnit pouze "
+	"pomocí vlastních nástrojů od výrobce disku. Nicméně tyto nástroje nejsou NIKDY "
 	"poskytovány veřejnosti..."
 t MSG_099 "Omezení souborového systému"
 t MSG_100 "Tento ISO obraz obsahuje soubor větší než 4GB, přesahující maximální "
@@ -3464,8 +3489,8 @@ t MSG_102 "Váš systém neumí rozbalit soubory z WIM archivu. Rozbalení WIM j
 	"nainstalováním aktuální verze programu 7-Zip.\nChcete přejít na stránku pro stažení 7-Zip?"
 t MSG_103 "Stáhnout %s?"
 t MSG_104 "%s nebo vyšší vyžaduje instalaci souboru %s.\n"
-	"Protože tento soubor je větší než 100 KB a vždy je součástí %s ISO obrazech, "
-	"není součástí programu Rufus.\n\nProgram Rufus může chybějící soubor stáhnout za vás:\n"
+	"Protože tento soubor je větší než 100 KB a vždy je součástí %s ISO obrazu, "
+	"není součástí programu Rufus.\n\nProgram Rufus může chybějící soubor stáhnout za Vás:\n"
 	"- Zvolte 'Ano' pro připojení na internet a stážení souboru\n"
 	"- Zvolte 'Ne' pokud chcete tento soubor na disk později zkopírovat ručně\n\n"
 	"Poznámka: Soubor %s bude stažen do aktuální složky "
@@ -3521,18 +3546,18 @@ t MSG_157 "Nastaví cílový souborový systém"
 t MSG_158 "Minimální velikost, kterou zabere blok dat v souborovém systému"
 t MSG_159 "Pokud chcete nastavit jmenovku svazku, vyplňte pole.\nJsou podporované i mezinárodní znaky."
 t MSG_160 "Přepnout pokročilá nastavení"
-t MSG_161 "Zkontrolovat zařízení na přítomnost chybných\nbloků použitím zkušebních vzorků"
-t MSG_162 "Odstraněním označení použijete pomalou metodu formátování"
-t MSG_163 "Označením tohoto políčka povolíte vytvoření boot USB disku"
+t MSG_161 "Zkontrolovat zařízení na přítomnost chybných\nbloků použitím zkušebního vzorku"
+t MSG_162 "Odškrtnutím použijete pomalou metodu formátování"
+t MSG_163 "Odškrtnutím povolíte vytvoření boot USB disku"
 t MSG_164 "Vyberte metodu, která bude použitá k vytvoření boot zařízení"
 t MSG_165 "Klikněte pro výběr obrazu..."
-t MSG_166 "Označením tohoto políčka povolíte v názvu disku zobrazení mezinárodních znaků "
+t MSG_166 "Označením povolíte v názvu disku zobrazení mezinárodních znaků "
 	"a vytvoření ikony zařízení (vytvořením souboru autorun.inf)"
 t MSG_167 "Instalovat MBR, který umožní výběr při zavádění systému a zamaskování BIOS ID disku USB"
 t MSG_168 "Pokusit se o zamaskování boot USB jednotky (většinou 0x80) jako jiného disku.\n"
 	"Obvykle nutné pouze pokud chcete instalovat Windows XP a máte více jak jeden disk"
 t MSG_169 "Vytvořit další skrytý oddíl a pokusit se o zarovnání hranice oddílů.\n"
-	"Toto nastavení může zlepšit detekci spustitelného zařízení pro starší BIOSy"
+	"Toto nastavení může zlepšit detekci spustitelného zařízení pro starší BIOS"
 t MSG_170 "Povolí zobrazení pevných disků a USB. POUŽITÍ JEN NA VLASTNÍ RIZIKO!!!"
 t MSG_171 "Klepnutím spustíte formátování.\nFormátovaním se ODSTRANÍ veškerá data na cílovém zařízení!"
 t MSG_172 "Informace o licenci, aktualizaci a zásluhy"
@@ -3541,16 +3566,16 @@ t MSG_173 "Kliknutím zvolit..."
 t MSG_174 "Rufus - Spolehlivý program pro formátování USB"
 t MSG_175 "Verze %d.%d (Build %d)"
 t MSG_176 "Čeština:	Richard Kahl <mailto:richard.kahl@seznam.cz>"
-t MSG_177 "Nahlášení chyb nebo náměty na zlepšení programu:"
+t MSG_177 "Nahlášení chyb nebo námětů pro zlepšení programu:"
 t MSG_178 "Další licenční informace:"
 t MSG_179 "Zásady aktualizace"
 t MSG_180 "Pokud povolíte tomuto programu kontrolu aktualizací, "
 	"souhlasíte s tím, že naše servery mohou shromažďovat následující údaje:"
-t MSG_181 "Architektura vašeho operačního systému a jeho verze"
-t MSG_182 "Používaná verze aplikace Rufus"
+t MSG_181 "Architektura vašeho operačního systému a jeho verzi"
+t MSG_182 "Použitá verze aplikace Rufus"
 t MSG_183 "Vaši IP adresa"
-t MSG_184 "Pro účely vytváření neveřejných statistík používání programu můžeme uchovávat tyto shromážděné údaje, a to "
-	"\\b nejvýše po dobu jednoho roku\\b0 . Žádný z těchto jednotlivých údajů však dobrovolně nepředáme třetím osobám."
+t MSG_184 "Pro účely vytváření neveřejných statistik používání programu můžeme uchovávat tyto shromážděné údaje, a to "
+	"\\b nejvýše po dobu jednoho roku\\b0 . Žádný z těchto jednotlivých údajů však dobrovolně nepředáme třetí osobě."
 t MSG_185 "Aktualizační proces"
 t MSG_186 "Rufus neinstaluje ani nespouští služby na pozadí. Kontrola aktualizací proto probíhá pouze v případě, kdy je spuštěna hlavní aplikace.\\line\n"
 	"Pro kontrolu aktualizací programu je samozřejmě nutný přístup k Internetu."
@@ -3567,10 +3592,10 @@ t MSG_194 "Nelze stáhnout %s"
 t MSG_195 "Pomocí integrované verze %s soubor(s)"
 t MSG_196 "DŮLEŽITÉ: TATO JEDNOTKA POUŽÍVÁ NESTANDARTNÍ VELIKOS SEKTORŮ!\n\n"
 	"Běžné disky používají 512-byte velikost sektorů tato jednotka používá %d-byte one. "
-	"V mnoha případech to znamená, že nebudete moci nastartovat z této jednotky.\n"
+	"V mnoha případech to znamená, že nebudete moci zavádět systém z této jednotky.\n"
 	"Rufus můžete zkusit vytvořit bootovací jednotku, ale neexistuje žádná záruka, že to bude fungovat."
 t MSG_197 "Zjištěna Nestandartní velikost sektorů"
-t MSG_198 "'Přenosný Windows' lze nainstalovat pouze na GPT oddíl jednotky"
+t MSG_198 "'Přenosný Windows' lze nainstalovat pouze na GPT oddíl"
 	"nastavte PEVNÝ atribut. Aktuální jednotka nebyla detekována jako PEVNÁ."
 t MSG_199 "Vyberte tuto možnost, pokud chcete instalovat Windows, na jiný disk, použitím vybraného zařízení jako instalačního média."
 t MSG_200 "Tuto možnost vyberte, pokud chcete spustit Windows přímo z vybraného zařízení."
@@ -3592,7 +3617,7 @@ t MSG_207 "Nový svazek"
 t MSG_208 "Bylo nalezeno %d zařízení"
 t MSG_209 "Bylo nalezeno %d zařízení"
 t MSG_210 "PŘIPRAVEN"
-t MSG_211 "Zrušeno"
+t MSG_211 "ZRUŠENO"
 t MSG_212 "NEZDAŘILO SE"
 # Used when a new update has been downloaded and launched
 t MSG_213 "Spuštění nové verze programu..."
@@ -3612,7 +3637,7 @@ t MSG_221 "Nastavení jmenovky (může chvíli trvat)..."
 # Parameter: the file system. eg. "Formatting (NTFS)..."
 t MSG_222 "Formátování (%s)..."
 t MSG_223 "Oprava NTFS (Kontrola disku)..."
-t MSG_224 "Odstraňování MBR/PBR/GPT struktury..."
+t MSG_224 "Odstranění MBR/PBR/GPT struktury..."
 t MSG_225 "Požadavek na přístup na disk..."
 t MSG_226 "Analyzování stávajících zaváděcích záznamů..."
 t MSG_227 "Uzavření stávajího svazku..."
@@ -3635,8 +3660,8 @@ t MSG_240 "Stahování %s - Probíhá připojení..."
 t MSG_241 "Stahování: %0.1f%% dokončeno"
 t MSG_242 "Stažení souboru se nezdařilo."
 t MSG_243 "Kontrola aktualizací programu Rufus..."
-t MSG_244 "Aktualizace: Chyba připojení k Internetu"
-t MSG_245 "Aktualizace: Údaje o verzi nedostupné"
+t MSG_244 "Aktualizace: Není připojení k Internetu"
+t MSG_245 "Aktualizace: Údaje o verzi jsou nedostupné"
 t MSG_246 "Je dostupná nová verze programu Rufus!"
 t MSG_247 "Nebyla nalezena nová verze programu"
 t MSG_248 "Klíče registrů aplikace byly úspěšně odstraněny"
@@ -3666,23 +3691,32 @@ t MSG_270 "USB ladění"
 t MSG_271 "Výpočet kontrolních součtů: %0.1f%% komplet"
 t MSG_272 "Vypočet MD5, SHA1 a SHA256 kontrolního součty pro vybraný obraz"
 t MSG_273 "Změna jazyka aplikace"
-t MSG_274 "ISOHybridní obraz detekován"
-t MSG_275 "Obráz, který jste si vybrali, je obraz 'ISOHybrid'. To znamená, že může být zapsán buď v "
+t MSG_274 "ISO Hybridní obraz detekován"
+t MSG_275 "Obráz, který jste si vybrali, je obraz 'ISO Hybrid'. To znamená, že může být zapsán buď v "
 	"%s (kopírování souborů) v režimu %s (obraz disku) režim.\n"
-	"Rufus doporučuje použití %s režim, vždy plný přístu k jednotce pro zápis.\n"
+	"Rufus doporučuje použití %s režim, pokud je plný přístu k jednotce pro zápis.\n"
 	"Pokud narazíte na problémy při startu, můžete zkusit zapsat tento obraz znovu %s režim.\n\n"
 	"Vyberte režim, který chcete použít k zapsání tohoto obrázu:"
 t MSG_276 "Režim zápisu %s (Doporučená)"
 t MSG_277 "Režim zápisu %s"
-t MSG_278 "Typ boot"
+t MSG_278 "Typ bootu"
 t MSG_279 "Není boot"
 t MSG_280 "Volba obrazu"
 t MSG_281 "(Prosím, vyberte obraz)"
 t MSG_282 "Uzamčení USB disku"
 t MSG_283 "Neplatný podpis"
 t MSG_284 "Schází digitální podpis u staženého programu."
-t MSG_285 "Stažený program je podepsán '%s'.\nTento není jsme si vědomi že muže být "
-	"indikovaná jako škodlivý program aktivita...\nOpravdu chcete spustit tento program?"
+t MSG_285 "Stažený program je podepsán '%s'.\nTento není jste si vědomi že muže být "
+	"indikovaná jako škodlivý program...\nOpravdu chcete spustit tento program?"
+t MSG_286 "Nulování jednotky: %0.1f%% komplet"
+t MSG_287 "Detekce není vložen USB disk"
+t MSG_288 "Nemáte oprávnění správce"
+t MSG_289 "Tuto aplikaci lze spustit pouze s oprávněním správce"
+t MSG_290 "Indexování souborů"
+t MSG_291 "Výběr verze"
+t MSG_292 "Vyberte verzi systému Windows kterou chcete nainstalovat:"
+t MSG_293 "Nepodporovaná verze systému Windows"
+t MSG_294 "Tuto verze systému Windows nepodporuje Rufus."
 
 ################################################################################
 l "da-DK" "Danish (Dansk)" 0x0406
@@ -4126,7 +4160,7 @@ t MSG_285 "Den hentede fil er signeret af '%s'.\nDet er ikke en signatur vi genk
 
 ################################################################################
 l "nl-NL" "Dutch (Nederlands)" 0x0413, 0x0813
-v 1.0.19
+v 1.0.20
 b "en-US"
 
 # Main dialog
@@ -4582,10 +4616,11 @@ t MSG_284 "het gedownloade programmabestand heeft geen digitale handtekening."
 t MSG_285 "Het gedownloade programmabestand is ondertekend door '%s'.\nDit is geen herkende handtekening "
 	"en zou dus kunnen betekenen dat iemand malware in dit bestand heeft verborgen...\nWeet u zeker dat u dit bestand wilt uitvoeren?"
 t MSG_286 "Nullen schrijven : %0.1f%% voltooid"
+t MSG_287 "Verwijderbare niet-USB drives gedetecteerd"
 
 ################################################################################
 l "fi-FI" "Finnish (Suomi)" 0x040B
-v 1.0.19
+v 1.0.20
 b "en-US"
 
 # Main dialog
@@ -5031,10 +5066,12 @@ t MSG_283 "Epäkelpo allekirjoitus"
 t MSG_284 "Ladatusta tiedostosta puuttuu digitaalinen allekirjoitus."
 t MSG_285 "Ladatun tiedoston on allekirjoittanut '%s'.\nEmme tunnista kyseistä allekirjoitusta, mikä "
 	"saattaa viitata haitalliseen toimintaan...\nHaluatko varmasti suorittaa tämän tiedoston?"
+t MSG_286 "Nollataan asemaa: %0.1f%% suoritettu"
+t MSG_287 "Ei-USB-liitäntäisten irroitettavien asemien tunnistus"
 
 ################################################################################
 l "fr-FR" "French (Français)" 0x040c, 0x080c, 0x0c0c, 0x100c, 0x140c, 0x180c, 0x1c0c, 0x200c, 0x240c, 0x280c, 0x2c0c, 0x300c, 0x340c, 0x380c, 0xe40c
-v 1.0.20
+v 1.0.21
 b "en-US"
 
 g IDD_DIALOG
@@ -5225,7 +5262,7 @@ t MSG_087 "Veuillez cliquer sur le bouton avec un disque pour sélectionner une 
 	"ou décochez l'option \"Créer un disque de démarrage\"."
 t MSG_088 "Image trop large"
 t MSG_089 "L'image est trop large pour être copiée sur le périphérique sélectionné."
-t MSG_090 "Image ISO on supportée"
+t MSG_090 "Image ISO non supportée"
 t MSG_091 "Quand UEFI est sélectionné, seules les images ISO basées sur EFI sont supportées. "
 	"Veuillez sélectionner une image ISO démarrable avec EFI ou sélectionner BIOS pour le système de destination."
 t MSG_092 "Système de fichiers non supporté"
@@ -5452,10 +5489,17 @@ t MSG_285 "L'exécutable téléchargé est signé par '%s'.\nCe n’est pas une 
 	"pourrait indiquer une activité malicieuse...\nÊtes-vous certain de vouloir lancer ce fichier?"
 t MSG_286 "Effacement à zéro : %0.1f%% complété"
 t MSG_287 "Détection disques non-USB détachables"
+t MSG_288 "Privilèges élevés manquants"
+t MSG_289 "Cette application peut seulement être exécutée avec privilèges administratifs"
+t MSG_290 "Indexation de fichiers"
+t MSG_291 "Sélection de version"
+t MSG_292 "Sélectionnez la version de Windows que vous souhaitez installer :"
+t MSG_293 "Version de Windows non supportée"
+t MSG_294 "Cette version de Windows n'est plus supportée par Rufus."
 
 ################################################################################
 l "de-DE" "German (Deutsch)" 0x0407, 0x0807, 0x0c07, 0x1007, 0x1407
-v 1.0.19
+v 1.0.21
 b "en-US"
 
 g IDD_DIALOG
@@ -5749,7 +5793,7 @@ t MSG_163 "Aktivieren, um das Laufwerk startfähig zu machen"
 t MSG_164 "Methode, um das Laufwerk startfähig zu machen"
 t MSG_165 "Wählen Sie eine Abbild-Datei..."
 t MSG_166 "Wählen Sie diesed Option, um die Anzeige internationaler Bezeichnungen zu ermöglichen "
-	"und und Gerätesymbol zu erzeugen (Datei autorun.inf)"
+	"und ein Gerätesymbol zu erzeugen (Datei autorun.inf)"
 t MSG_167 "Erzeugt einen MBR, der eine Bootmenü erzeugt und die ID des BIOS USB-Laufwerks maskieren kann"
 
 t MSG_168 "Das erste startfähige USB-Laufwerk maskieren (normalerweise 0x80) als andere Festplatte.\n"
@@ -5897,10 +5941,19 @@ t MSG_283 "Ungültige Signatur"
 t MSG_284 "Die heruntergeladene ausführbare Datei verfügt über keine Signatur."
 t MSG_285 "Die heruntergeladene ausführbare Datei ist von '%s' signiert.\nDiese Signatur ist nicht akzeptiert und könnte "
 	"auf eine böswillige Aktivität hindeuten...\nSind Sie sicher, dass Sie diese Datei ausführen wollen?"
+t MSG_286 "Überschreiben mit Nullen: %0.1f%% fertiggestellt"
+t MSG_287 "Erkennung nicht wechselbarer USB-Laufwerke"
+t MSG_288 "Administrative Rechte nicht vorhanden"
+t MSG_289 "Dieses Programm kann nur mit administrativen Rechten ausgeführt werden."
+t MSG_290 "Datei-Indizierung"
+t MSG_291 "Versionsauswahl"
+t MSG_292 "Bitte wählen Sie die Version von Windows aus, die Sie installieren wollen:"
+t MSG_293 "Nicht unterstützte Windows-Version"
+t MSG_294 "Diese Version von Windows ist nicht mehr von Rufus unterstützt."
 
 ################################################################################
 l "el-GR" "Greek (Ελληνικά)" 0x0408
-v 1.0.19
+v 1.0.20
 b "en-US"
 
 # Main dialog
@@ -6378,10 +6431,471 @@ t MSG_284 "Το εκτελέσιμο αρχείο που κατεβάσατε δ
 τ MSG_285 "Το εκτελέσιμο αρχείο που κατεβάσατε έχει υπογραφτεί από τον/την '%s'.\nΑύτη η υπογραφή δεν "
 	"αναγνωρίζεται από το Rufus. Ενδεχομένως να υπάρχει συσχέτιση με κάποια κακόβουλη προσπάθεια...\n"
 	"Είστε σίγουροι ότι θέλετε να εκτελέσετε αυτό το αρχείο?"
+t MSG_286 "Άδειασμα δίσκου: %0.1f%% ολοκληρώθηκε"
+t MSG_287 "Ανίχνευση μη αφαιρούμενων δίσκων USB"
+
+################################################################################
+l "he-IL" "Hebrew (עברית)" 0x040d
+a "r"
+v 1.0.21
+b "en-US"
+
+g IDD_DIALOG
+t IDS_DEVICE_TXT "התקן"
+t IDS_PARTITION_TYPE_TXT "תוכנית המחיצות וסוג מערכת היעד"
+t IDS_FILESYSTEM_TXT "מערכת קבצים"
+t IDS_CLUSTERSIZE_TXT "גודל מקטע"
+t IDS_LABEL_TXT "תווית חדשה לאמצעי האחסון"
+t IDS_FORMAT_OPTIONS_GRP "אפשרויות אתחול"
+t IDC_BADBLOCKS "בדוק את ההתקן לאיזורים פגומים"
+t IDC_QUICKFORMAT "אתחול מהיר"
+t IDC_BOOT "צור דיסק בר אתחול עם"
+t IDC_WINDOWS_INSTALL "התקנת windows רגילה"
+t IDC_WINDOWS_TO_GO "Windows To Go"
+t IDC_SET_ICON "צור תווית מורחבת וקבצי תמונה"
+t IDC_ABOUT "אודות..."
+s IDC_LOG +10,0
+t IDC_LOG "לוג"
+t IDCANCEL "סגור"
+t IDC_START "התחל"
+t IDS_ADVANCED_OPTIONS_GRP "אפשרויות מתקדמות"
+t IDC_ENABLE_FIXED_DISKS "חפש כוננים קשיחים של USB"
+t IDC_EXTRA_PARTITION "הוסף תיקונים ל BIOS ישן (מחיצה נוספת, יישור...)"
+t IDC_RUFUS_MBR "שימוש ב MBR של רופוס"
+
+# About dialog
+g IDD_ABOUTBOX
+t IDD_ABOUTBOX "אודות רופוס"
+t IDC_ABOUT_LICENSE "רישיון"
+t IDC_ABOUT_UPDATES "עדכונים"
+t IDOK "אישור"
+
+# About -> License dialog
+g IDD_LICENSE
+t IDD_LICENSE "רישיון רופוס"
+t IDCANCEL "סגור"
+
+# Notifications. You can trigger one of these by using Alt-R and re-launching Rufus
+g IDD_NOTIFICATION
+t IDC_MORE_INFO "עוד מידע"
+t IDYES "כן"
+t IDNO "לא"
+
+# Log dialog
+g IDD_LOG
+t IDD_LOG "יומן רישום"
+t IDC_LOG_CLEAR "נקה לוג"
+t IDC_LOG_SAVE "שמור לוג"
+t IDCANCEL "סגור לוג"
+
+# About -> Updates
+g IDD_UPDATE_POLICY
+t IDD_UPDATE_POLICY "מדיניות והגדרות העדכונים"
+t IDS_UPDATE_SETTINGS_GRP "הגדרות"
+t IDS_UPDATE_FREQUENCY_TXT "חפש עדכונים:"
+t IDS_INCLUDE_BETAS_TXT "כולל גרסאות בטא"
+t IDC_CHECK_NOW "חפש עכשיו"
+t IDCANCEL "סגור"
+
+# Dialog that appears when a new version is available
+g IDD_NEW_VERSION
+t IDD_NEW_VERSION "חפש עדכונים - רופוס"
+t IDS_NEW_VERSION_AVAIL_TXT "גרסה חדשה זמינה להורדה. בבקשה תוריד את הגרסה האחרונה"
+t IDC_WEBSITE "לחץ כאן כדי ללכת לאתר"
+t IDS_NEW_VERSION_NOTES_GRP "מה חדש?"
+t IDS_NEW_VERSION_DOWNLOAD_GRP "הורד"
+t IDC_DOWNLOAD "הורד"
+t IDCANCEL "סגור"
+
+# Messages used throughout the application
+t MSG_001 "מופע אחר זוהה"
+t MSG_002 "תוכנת רופוס אחרת פועלת ברקע.\n"
+	"נא סגור את התוכנה הפעילה לפני ההפעלה הנוכחית."
+t MSG_003 "אזהרה: כל המידע בהתקן '%s' יושמד\n"
+	"כדי להמשיך בפעולה, לחץ אישור. כדי לבטל לחץ ביטול"
+t MSG_004 "מדיניות העדכונים של רופוס"
+t MSG_005 "האם לאפשר לרופוס לבדוק עדכונים לעצמו באינטרנט?"
+# Must be the same as IDD_DIALOG:IDCANCEL (i.e. "Close" - I know it's confusing)
+t MSG_006 "סגור"
+t MSG_007 "ביטול"
+t MSG_008 "כן"
+t MSG_009 "לא"
+t MSG_010 "אזור פגום נמצא"
+t MSG_011 "הבדיקה הושלמה: %u איזור רע(s) נמצא\n"
+	"  %d שגיאה בקריאה(s)\n %d שגיאה בכתיבה(s)\n %d תקלת שחיטות(s)\n"
+# The following will contain the formatted message above as well as the name of the bad blocks logfile
+t MSG_012 "%s\nדוח יותר מפורט יכול להימצא ב:\n%s"
+t MSG_013 "מושבת"
+t MSG_014 "יומי"
+t MSG_015 "שבועי"
+t MSG_016 "חודשי"
+t MSG_017 "מותאם אישית"
+t MSG_018 "הגרסה שלך: %d.%d (Build %d)"
+t MSG_019 "הגרסה האחרונה: %d.%d (Build %d)"
+# *Short* size names. These can be used as suffixes
+t MSG_020 "bytes"
+t MSG_021 "KB"
+t MSG_022 "MB"
+t MSG_023 "GB"
+t MSG_024 "TB"
+t MSG_025 "PB"
+# *Long* size names, as they are displayed for the cluster size in the MS format dialog.
+t MSG_026 "בתים"	# Yes, this is a repeat from MSG_020
+t MSG_027 "קילו בתים"
+t MSG_028 "מגה בתים"
+t MSG_029 "ברירת מחדל"
+# The following gets appended to the file system, cluster size, etc.
+t MSG_030 "%s (ברירת מחדל)"
+t MSG_031 "מערכת מחיצות %s ל  BIOS או ל  %s"
+t MSG_032 "מערכת מחיצות %s ל  BIOS"
+t MSG_033 "מערכת מחיצות %s ל  UEFI"
+# Number of bad block check passes (singular for 1 pass, plural for 2 or more passes)
+t MSG_034 "מעבר %d"
+t MSG_035 "%d מעברים"
+t MSG_036 "תמונת ISO"
+t MSG_037 "תוכנה"
+t MSG_038 "ביטול"
+t MSG_039 "פתח"
+t MSG_040 "הורד"
+t MSG_041 "הפעולה בוטלה על ידי המשתמש"
+t MSG_042 "שגיאה"
+t MSG_043 "שגיאה: %s"
+t MSG_044 "הורד קובץ"
+t MSG_045 "התקן אחסון USB (כללי)"
+t MSG_046 "%s (התקן %d) [%s]"
+# Used when a drive is detected that contains more than one partition
+t MSG_047 "מחיצות כפולות"
+t MSG_048 "רופוס - מרוקן מאגרים"
+t MSG_049 "רופוס - ביטול"
+
+# Error messages
+t MSG_050 "הצלחה."
+t MSG_051 "שגיאה לא מזוהה בזמן האתחול"
+t MSG_052 "אי אפשר להשתמש במערכת קבצים שבחרת עם הקובץ הזה."
+t MSG_053 "גישה להתקן נדחתה."
+t MSG_054 "ההתקן מוגן מכתיבה."
+t MSG_055 "ההתקן הזה בשימוש על ידי תוכנה אחרת "
+	"בבקשה לסגור כל תוכנה אחרת שאולי משתמשת בהתקן"
+t MSG_056 "אתחול מהיר לא זמין להתקן הזה."
+t MSG_057 "תווית השם של האחסון שגויה."
+t MSG_058 "תחזוק המכשיר שגוי."
+t MSG_059 "גודל המקטע שנבחר לא זמין להתקן הזה."
+t MSG_060 "גודל ההתקן שגוי."
+t MSG_061 "בבקשה להכניס התקן שניתן להסרה."
+t MSG_062 "פקודה לא נתמכת התקבלה."
+t MSG_063 "שגיאה בהקצאת זיכרון."
+t MSG_064 "שגיאת קריאה."
+t MSG_065 "שגיאת כתיבה."
+t MSG_066 "ההתקנה נכשלה."
+t MSG_067 "א אפשר לפתוח את ההתקן, אולי הוא בשימוש על ידי תוכנה אחרת. "
+	"בבקשה חבר מחדש את האחסון ונסה שוב."
+t MSG_068 "שגיאה בחלוקת ההתקן למחיצות."
+t MSG_069 "אי אפשר להעתיק קבצים להתקן היעד."
+t MSG_070 "בוטל על ידי המשתמש."
+# See http://en.wikipedia.org/wiki/Thread_%28computing%29
+t MSG_071 "לא יכול לפתוח תהליך."
+t MSG_072 "בדיקת איזורים פגומים לא הושלמה."
+t MSG_073 "קריאת קובץ ה ISO נכשלה."
+t MSG_074 "חילוץ קובץ ה ISO נכשל."
+t MSG_075 "לא יכול להעלות את ההתקן."
+t MSG_076 "לא יכול להכין קבצים לאתחול."
+t MSG_077 "לא יכול להקצות אות לכונן."
+t MSG_078 "לא יכול להעלות את התקן ה GUID."
+t MSG_079 "ההתקן לא מוכן."
+
+t MSG_080 "רופוס זיהה ש Windows עדיין מרוקן את המאגרים הפנימיים שלו לתוך התקן ה USB.\n\n"
+	"הפעולה הזאת יכולה לקחת הרבה זמן, תלוי במהירות התקן ה USB שלך, "
+	"במיוחד הבקבצים גדולים.\n\n אנחנו ממליצים שתיתן ל Windows לסיים, כדי להימנע מיצירת שגיאות במידע. "
+	"אבל אם נמאס לך לחכות, אתה יכול פשוט לנתק את ההתקן..."
+t MSG_081 "קובץ לא נתמך."
+t MSG_082 "הקובץ הזה לא ניתן לאתחול, או שהוא משתמש בכיווץ או צורת אתחול שלא נתמכת על ידי רופוס."
+t MSG_083 "להחליף %s?"
+t MSG_084 "נראה שקובץ ה ISO הזה משתמש בגרסה מיושנת של '%s'.\n"
+	"בגלל זה יכול להיות שתפריטי האתחול לא יוצגו נכון.\n\n"
+	"רופוס יכול להוריד גרסה חדשה כדי לתקן את הבעיה:\n"
+	"- בחר 'כן' כדי להתחבר לאינטרנט ולהוריד את הקובץ\n"
+	"- בחר 'לא' כדי להשאיר את קובץ ה ISO ללא שינויים\n"
+	"אם אתה לא יודע מה לעשות, כדאי שתבחר 'כן'.\n\n"
+	"שים לב: הקובץ החדש ירד לתיקייה בה ממוקמת התוכנה וברגע ש "
+	"'%s' יהיה שם, רופוס ישתמש בו אוטומטית."
+t MSG_085 "מוריד %s"
+t MSG_086 "לא נבחר שום קובץ."
+# The content between the quotes below (\"Create a bootable disk\") should match
+# the beginning of the IDC_BOOT text
+t MSG_087 "בבקשה לחץ על הסמל של הדיסק כדי לבחור קובץ בר אתחול, "
+	"או בטל את האפשרות \"צור דיסק בר אתחול עם\""
+t MSG_088 "הקובץ גדול מדי."
+t MSG_089 "הקובץ גדול מדי בשביל ההתקן שנבחר."
+t MSG_090 "קובץ ISO לא נתמך."
+t MSG_091 "כשבוחרים ב UEFI כסוג מערכת היעד, רק קבצי ISO שניתנים לאתחול EFI נתמכים. "
+	"בבקשה בחר קובץ ISO שניתן לאתחול EFI או שנה את סוג מערכת היעד ל BIOS."
+t MSG_092 "מערכת קבצים לא נתמכת."
+t MSG_093 "חשוב: ההתקן הזה מכיל מחיצות כפולות!!\n\n"
+	"זה יכול לכלול כוננים/מחיצות שלא מפורטות או אולי אפילו בלתי נראות ב Windows."
+	"אם תחליט להמשיך, אתה אחראי לכל אובדן מידע במחיצות האלה."
+t MSG_094 "נבחרו מחיצות כפולות"
+t MSG_095 "קובץ DD"
+t MSG_096 "מערכת הקבצים שנבחרה לא יכולה לעבוד עם ISO מהסוג הזה. "
+	"בבקשה השתמש במערכת קבצים אחרת או בחר ISO אחר."
+t MSG_097 "'%s' יכול לעבוד רק אם מערכת הקבצים היא NTFS."
+t MSG_098 "חשוב: אתה מנסה להתקין 'Windows To Go', אבל להתקן שלך אין "
+	"תכונה 'FIXED'. בגלל זה רוב הסיכויים הם ש Windows ייקפא בזמן האתחול כי microsoft "
+	"לא יצרה את windows to go בצורה שיכולה לעבוד עם התקנים שיש להם תכונה 'REMOVABLE'\n\n"
+    "האם אתה עדיין רוצה להמשיך?\n\n"
+	"שים לב: התכונות FIXED/REMOVABLE הם תכונות בחומרה שניתנות לשינוי רק בעזרת כלים מיוחדים של היצרן של ההתקן."
+	"למרות זאת, הכלים האלה כמעט אף פעם לא "
+	"משוחררים לציבור..."
+t MSG_099 "מגבלות של מערכת הקבצים."
+t MSG_100 "קובץ ה ISO הזה מכיל קובץ שגדול מ 4G, "
+	"וזה יותר מהגודל המקסימלי שמערכות קבצים FAT או FAT32 יכולות לאחסן."
+t MSG_101 "אין תמיכה של WIM."
+t MSG_102 "מערכת ההפעלה שלך לא יכולה לחלץ קבצים מארכיוני WIM. חילוץ מ WIM "
+	"דרוש ליצירת דיסק של windows 7/vista שניתנים לאתחול EFI. אתה יכול לתקן את זה "
+	"אם תוריד את הגרסה האחרונה של 7zip.\nאתה רוצה ללכת לאתר ההורדה של 7zip?"
+t MSG_103 "להוריד %s?"
+t MSG_104 "%s או חדש יותר דורש ש %s יהיה מותקן.\n"
+	"בגלל שהקובץ הזה גדול יותר מ 100 KB, ותמיד קיים בקבצי ISO של %s, "
+	"הוא לא קיים ברופוס.\n\n רופוס יכול להוריד את הקובץ החסר בשבילך:\n"
+	"- בחר 'כן' כדי להתחבר לאינטרנט ולהוריד את הקובץ\n"
+	"- בחר 'לא' אם אתה רוצה להעתיק את הקובץ הזה בצורה ידנית אחר כך\n\n"
+	"שים לב: הקובץ יירד לספרייה בה ממוקמת התוכנה וברגע ש "
+	"יהיה שם '%s', רופוס ישתמש בו אוטומטית.\n"
+t MSG_105 "ביטול יכול להשאיר את ההתקן במצב בלתי ניתן לשימוש.\n"
+	"אם אתה בטוח שאתה רוצה לבטל, תלחץ כן. אחרת, תלחץ לא."
+t MSG_106 "בבקשה בחר תיקייה"
+t MSG_107 "כל הקבצים"
+t MSG_108 "יומן Rufus"
+# LTR & RTL before and after "0x%02X"
+t MSG_109 "‎0x%02X‏ (דיסק %d)"
+# "Cluster size" below should be the same as the label for IDS_CLUSTERSIZE_TXT
+# "kilobytes" should be the same as in MSG_027
+t MSG_110 "MS-DOS לא יכול לאתחל מהתקן שמשתמש בגודל מקטע של 64 קילו בתים.\n"
+	"בבקשה שנה את גודל המקטע או השתמש ב FreeDOS."
+t MSG_111 "גודל מקטע לא מתאים"
+# "%d:%02d" below is a duration (mins:secs)
+t MSG_112 "אתחול התקן UDF גדול יכול לקחת הרבה זמן. במהירות של USB 2.0, זמן האתחול "
+	"המשוער הוא: %d:%02d, בזמן הזה מד ההתקדמות ייראה קפוא. בבקשה היה סבלני!"
+t MSG_113 "התקן UDF גדול"
+t MSG_114 "הקובץ הזה משתמש ב Syslinux %s%s אבל התוכנה הזאת כוללת רק את קבצי ההתקנה של "
+	"Syslinux %s%s. \n\nבגלל שגרסאות חדשות של Syslinux לא מתאימות לאחרות, וזה  "
+	"בלתי אפשרי לרופוס לכלול את כולם, שני קבצים נוספים חייבים לרדת "
+	"מהאינטרנט('ldlinux.sys' و 'ldlinux.bss'):\n"
+	"- בחר כן כדי להתחבר לאינטרנט ולהוריד את הקבצים\n"
+	"- בחר לא כדי לבטל את הפעולה\n\n"
+	"שים לב: הקבצים האלה יירדו אל הספרייה הנוכחית ורופוס ישתמש בהם "
+	"אוטומטית אם הם קיימים.\n"
+t MSG_115 "נדרשת הורדה"
+t MSG_116 "הקובץ הזה משתמש ב Grub %s אבל התוכנה כוללת רק את קבצי ההתקנה של"
+	"Grub %s.\n\nבגלל שגרסאות שונות של Grub לא מתאימות לאחרות, וזה "
+	"בלתי אפשרי לכלול את כולם, רופוס ינסה למצוא גרסה של קובץ ההתקנה של Grub "
+	"('core.img') שמתאימה לזה שבקובץ שלך:\n"
+	"- בחר 'כן' כדי להתחבר לאינטרנט ולנסות להוריד אותו\n"
+	"- בחר 'לא' כדי להשתמש בגרסת ברירת המחדל מרופוס\n"
+	"- בחר 'בטל' כדי לבטל את הפעולה\n\n"
+	"שים לב: הקובץ יירד לספרייה הנוכחית ורופוס "
+	"ישתמש בו אוטומטית. אם לא יימצא קובץ מתאים, רופוס ישתמש בגרסת ברירת המחדל."
+# Tooltips
+# Partition Scheme and Target Type
+t MSG_150 "בדרך כלל הבחירה הכי בטוחה. אבל אם יש לך מחשב UEFI ואתה רוצה להתקין "
+	"מערכת הפעלה במצב EFI טבעי, כדאי שתבחר באחד מהאפשרויות האחרות"
+t MSG_151 "תבחר בזה אם אתה רוצה להתקין מערכת הפעלה במצב טבעי של EFI, אבל צריך "
+	"גישה לתוכן של התקן ה USB מ Windows XP"
+t MSG_152 "הבחירה המועדפת להתקנת מערכת הפעלה במצב טבעי של EFI, כשלא צריך "
+	"גישה להתקן ה USB מ Windows XP."
+t MSG_153 "בודק תבנית: 0x%02X"
+t MSG_154 "בודק תבנית: 0x%02X, 0x%02X"
+t MSG_155 "בודק תבנית: 0x%02X, 0x%02X, 0x%02X"
+t MSG_156 "בודק תבנית: 0x%02X, 0x%02X, 0x%02X, 0x%02X"
+t MSG_157 "קובע את מערכת הקבצים של היעד"
+t MSG_158 "הגודל המינימלי שבלוק בזיכרון ייתפוס במערכת הקבצים"
+t MSG_159 "השתמש בשדה הזה כדי להזין תווית שם לאמצעי האחסון\nתווים בינלאומיים ייתקבלו"
+t MSG_160 "הראה אפשרויות מתקדמות"
+t MSG_161 "בדוק את ההתקן לאיזורים פגומים באמצעות תבנית בדיקה"
+t MSG_162 "בטל את התיבה הזו כדי להשתמש בשיטת האתחול ה \"איטית\""
+t MSG_163 "בחר בתיבה הזו כדי להפוך את התקן ה USB שלך לבר-אתחול"
+t MSG_164 "השיטה שתהיה בשימוש כדי להפוך את ההתקן שלך לבר-אתחול."
+t MSG_165 "לחץ כדי לבחור קובץ."
+t MSG_166 "בחר בתיבה הזו כדי לאפשר הצגת תוויות שם בינלאומיות. "
+	"ולקבוע תמונה להתקן (יוצר קובץ autorun.inf)"
+t MSG_167 "מתקין MBR שמאפשר בחירת אתחול ויכול להשתמש ב BIOS USB drive ID"
+t MSG_168 "לגרום להתקן ה - USB בר-האתחול הראשון )בדרך כלל 0x80( להזדהות כדיסק אחר.\n"
+	"זה אמור להיות הכרחי אם אתה מתקין Windows XP ויש לך יותר מדיסק אחד"
+t MSG_169 "צור מחיצה נסתרת ונסה ליישר את הגבולות של המחיצות.\n"
+	"זה ייכול לשפר את קליטת האתחול ל BIOS ישן"
+t MSG_170 "להראות כוננים קשיחים של USB. השימוש באחריותך בלבד!!!"
+t MSG_171 "התחל את פעולת האתחול.\nזה ישמיד את כל המידע על ההתקן!"
+t MSG_172 "פרטי רישיון וקרדיט"
+t MSG_173 "לחץ כדי לבחור..."
+# The following will appear in the about dialog
+# NOTE: Because it starts with English text, the line below requires an invisible
+#       RIGHT-TO-LEFT EMBEDDING (UTF-8: 0xE2 0x80 0xAB) at the beginning and a
+#       POP DIRECTIONAL FORMATTING (UTF-8: 0xE2 0x80 0xAC) at the end.
+t MSG_174 "‫Rufus - שירות אתחול USB האמין ביותר‬"
+t MSG_175 "גרסה %d.%d (Build %d)"
+t MSG_176 "תרגום עברי: נועם סרוסי וידידים"
+t MSG_177 "דווח על באגים או הצע שיפורים:"
+t MSG_178 "זכויות יוצרים נוספות:"
+t MSG_179 "מדיניות העדכונים:"
+t MSG_180 "אם תבחר לאפשר לתוכנה הזאת לבדוק עדכונים, "
+	"אתה מסכים שהמידע הזה יישמר בשרתים שלנו:"
+t MSG_181 "סוג וגרסת מערכת ההפעלה שלך"
+t MSG_182 "הגרסה של התוכנה שאתה משתמש בה"
+t MSG_183 "כתובת ה - IP שלך"
+t MSG_184 "כדי ליצור סטטיסטיקת שימוש פרטית, יכול להיות שנשמור את המידע"
+	"\\b לכל היותר שנה\\b0 . עם זאת, אנחנו לא נמסור את המידע הזה לשום צד שלישי."
+t MSG_185 "תהליך עדכון:"
+t MSG_186 "רופוס לא מתקין או מפעיל שום תהליכי רקע, לכן חיפוש עדכונים יתבצע רק כשהתוכנה תופעל. \\line\n"
+	"כמובן שנדרשת גישה לאינטרנט כדי לחפש עדכונים."
+t MSG_187 "הקובץ לא תקין עם אפשרות האתחול שנבחרה"
+t MSG_188 "הקובץ הנוכחי לא מתאים לאפשרות האתחול שנבחרה. בבקשה בחר קובץ אחר או השתמש באפשרות אתחול אחרת."
+t MSG_189 "קובץ ה ISO הזה לא מתאים למערכת הקבצים שנבחרה"
+t MSG_190 "התקן לא מתאים"
+t MSG_191 "בדיקת כתיבה"
+t MSG_192 "בדיקת קריאה"
+t MSG_193 "ירד %s"
+t MSG_194 "לא יכול להוריד את %s"
+t MSG_195 "משתמש בגרסה מוטבעת של קובץ(קבצים) %s"
+t MSG_196 "חשוב: ההתקן הזה משתמש בגרסה לא סטנדרטית של גודל מקטע!\n\n"
+	"התקנים רגילים משתמשים בגודל מקטע של 512 בתים אבל ההתקן הזה משתמש באחד של %d. "
+	"בהרבה מקרים, זה אומר שלא תוכל לאתחל מההתקן הזה.\n"
+	"רופוס יכול לנסות ליצור התקן בר-אתחול, אבל אין שום אחריות או הבטחה שזה יעבוד."
+t MSG_197 "גודל מקטע לא סטנדרטי זוהה"
+t MSG_198 "'Windows To Go' יכול להיות מותקן על התקן שמאותחל ב GPT רק אם יש לו"
+	"תכונה של FIXED מותקנת. להתקן הנוכחי אין תכונה FIXED."
+t MSG_199 "בחר בזה אם אתה מתכנן להתקין Windows על דיסק אחר, ולהשתמש בהתקן הזה בשביל ההתקנה."
+t MSG_200 "בחר בזה אם אתה רוצה להריץ את Windows ישר מתוך ההתקן הנוכחי."
+
+# Status messages - these messages will appear on the status bar
+t MSG_201 "מבטל - המתן בבקשה..."
+t MSG_202 "סורק את הקובץ..."
+t MSG_203 "סריקת הקובץ נכשלה"
+# Parameter: the name of an obsolete Syslinux .c32 module. eg: "Obsolete vesamenu.c32 detected"
+t MSG_204 "%s מיושן זוהה"
+# Display the name of the ISO selected. eg: "Using ISO: en_win7_x64_sp1.iso"
+t MSG_205 "משתמש ב ISO: %s"
+# Typically "Missing ldlinux.c32 file"
+t MSG_206 "קובץ %s חסר"
+# The name proposed by Windows' Computer Management -> Disk Management when you try to format a drive
+# with an empty label. See http://rufus.akeo.ie/pics/default_name.png
+t MSG_207 "אמצעי אחסון חדש"
+# Same message, once for singular and plural ("1 device found", "2 devices found")
+t MSG_208 "התקן %d זוהה"
+t MSG_209 "%d התקנים זוהו"
+t MSG_210 "מוכן"
+t MSG_211 "בוטל"
+t MSG_212 "נכשל"
+# Used when a new update has been downloaded and launched
+t MSG_213 "פותח יישום חדש..."
+t MSG_214 "נכשל בפתיחת היישום החדש"
+# Open/Save file
+t MSG_215 "פתח %s"
+t MSG_216 "שמור %s"
+# Formatting status (make sure you use a double % to print the percent sign)
+t MSG_217 "מאתחל: %0.1f%% הושלמו"
+t MSG_218 "יוצר קבצי מערכת: משימה %d/%d הושלמה"
+t MSG_219 "NTFS תיקון: %d%% הושלמו"
+# Parameter: the file system and an estimated duration in mins and secs.
+# eg. "Formatting (UDF) - Estimated duration 3:21..."
+# NB: if "estimated duration" is too long, just use "estimated" or an abbreviation
+t MSG_220 "מאתחל (%s) - זמן משוער נותר %d:%02d..."
+t MSG_221 "מגדיר תווית (זה עשוי לקחת זמן)..."
+# Parameter: the file system. eg. "Formatting (NTFS)..."
+t MSG_222 "מאתחל (%s)..."
+t MSG_223 "NTFS תיקון (בודק דיסק)..."
+t MSG_224 "מנקה מבני מחיצות MBR/PBR/GPT..."
+t MSG_225 "מבקש גישה להתקן..."
+t MSG_226 "מנתח את רישום האתחול הקיים..."
+t MSG_227 "סוגר את ההתקן הקיים..."
+t MSG_228 "כותב רשומת אתחול..."
+t MSG_229 "כותב מחיצות אתחול..."
+t MSG_230 "מעתיק קבצי DOS..."
+t MSG_231 "מעתיק קבצי ISO..."
+t MSG_232 "Win7 EFI boot setup (זה יכול לקחת זמן)..."
+t MSG_233 "משלים, אנא המתן..."
+# Takes a Syslinux version as parameter, eg. "Installing Syslinux v5.10..."
+t MSG_234 "מתקין Syslinux %s..."
+# Bad blocks status. eg: "Bad Blocks: Write pass 1/2 - 12.34% (0/0/1 errors)"
+# See MSG_191/192 for "Write pass"/"Read pass" translation
+t MSG_235 "איזורים פגומים: %s %d/%d - %0.2f%% (%d/%d/%d שגיאות)"
+t MSG_236 "איזורים פגומים: בדיקה אקראית"
+t MSG_237 "איזורים פגומים: בדיקה באמצעות 0x%02X"
+# eg. "יוצר מחיצות (MBR)..."
+t MSG_238 "יוצר מחיצות (%s)..."
+t MSG_239 "מוחק מחיצות..."
+t MSG_240 "מוריד %s: מתחבר..."
+t MSG_241 "מוריד: %0.1f%%"
+t MSG_242 "נכשל בהורדת הקובץ."
+t MSG_243 "בודק עבור עדכוני רופוס..."
+t MSG_244 "עדכונים: אין אפשרות לגשת לאינטרנט"
+t MSG_245 "עדכונים: אין אפשרות לגשת לנתוני הגירסה"
+t MSG_246 "גירסה חדשה של רופוס זמינה!"
+t MSG_247 "לא נמצאה גירסה חדשה של רופוס"
+t MSG_248 "מפתחות הרישום של התוכנה נמחקו בהצלחה"
+t MSG_249 "נכשל במחיקת מפתחות הרישום של התוכנה"
+# eg. "Fixed disk detection enabled" "ISO size check disabled"
+t MSG_250 "%s מופעל"
+t MSG_251 "%s מושבת"
+t MSG_252 "בדיקת גודל"
+t MSG_253 "זיהוי דיסקים קשיחים"
+t MSG_254 "כפה אתחול FAT32 גדול"
+t MSG_255 "אי הרצה אוטומטית יימחק בעת היציאה"
+t MSG_256 "כונן מזוייף זוהה"
+t MSG_257 "תמיכה ב Joliet"
+t MSG_258 "תמיכה ב Rock Ridge"
+t MSG_259 "עשכון כפוי"
+t MSG_260 "דוחס NTFS"
+t MSG_261 "כותב תמונה: %0.1f%% הושלמו"
+# Cheat mode message to disable ISO Support so that only DD images can be opened
+t MSG_262 "תמיכה ב ISO"
+# Cheat mode to force legacy size units, where 1 KB is 1024 bytes and NOT that fake 1000 bytes abomination!
+t MSG_263 "השתמש בגודל יחידות תקין"
+t MSG_264 "מחיקת ספרייה '%s'"
+t MSG_265 "דיסק VMWare זוהה"
+t MSG_266 "מצב UEFI/BIOS כפול"
+t MSG_267 "מחיל תמונת Windows: %0.1f%% הושלמו"
+t MSG_268 "מחיל תמונת Windows..."
+t MSG_269 "שמור רישומי זמן"
+t MSG_270 "USB איתור באגים"
+t MSG_271 "מחשב בדיקת סיכום תמונה: %0.1f%% הושלמו"
+t MSG_272 "חשב את בדיקות הסיכום MD5, SHA1 ו SHA256 עבור התמונה הנבחרת."
+t MSG_273 "שנה את שפת התוכנה"
+t MSG_274 "תמונת ISOHybrid זוהתה"
+# '%s' below will be replaced with your translations for MSG_036 ("ISO Image") and MSG_095 ("DD Image")
+t MSG_275 "התמונה שבחרת היא תמונת ISOHybrid. זה אומר, שזה יכול להיכתב גם במצב "
+	"%s (העתקת קבצים) או במצב %s (תמונת דיסק).\n"
+	"רופוס ממליצה על מצב %s , כדי שתהיה לך גישה מלאה לכונן אחרי זה..\n"
+	"עם זאת, אם אתה נתקל בבעיות עם האחול, אתה יכול לנסות לצרוב את התמונה שוב במצב %s.\n\n"
+	"נא בחר את המצב איתו תרצה להשתמש בצריבת תמונה זו:"
+# '%s' below will be replaced with your translation for MSG_036 ("ISO Image")
+t MSG_276 "כתוב במצב %s (מומלץ)"
+# '%s' below will be replaced with your translation for MSG_095 ("DD Image")
+t MSG_277 "כתוב במצב %s"
+# The following will be used for new controls of the Rufus 3.0 interface
+# They are added as messages, so that I will have them available when needed.
+# 278 & 280 will be dropdown titles, similar to how IDS_DEVICE_TXT or IDS_PARTITION_TYPE_TXT are used
+# 279 & 281 will be items that can appear in the dropdowns
+t MSG_278 "סוג אתחול"
+t MSG_279 "לא בר אתחול"
+t MSG_280 "בחירת תמונה"
+t MSG_281 "(בבקשה בחר תמונה)"
+t MSG_282 "נעילת כונן USB"
+t MSG_283 "חתימה לא חוקית"
+t MSG_284 "הקובץ שהורד לא מכיל חתימה דיגיטלית."
+t MSG_285 "הקובץ שהורד חתום על ידי '%s'.\nזה לא חתימה שאנחנו מכירים וכנראה "
+	"זה מראה על פעילות זדונית...\nאתה בטוח שברצונך להפעיל את הקובץ הזה?"
+t MSG_286 "איפוס כונן: %0.1f%% הושלמו"
+t MSG_287 "איתור כוננים נשלפים שאינם USB"
+t MSG_288 "חסר הרשאות גבוהות"
+t MSG_289 "תוכנה זו יכולה לפעול רק עם הרשאות גבוהות"
+t MSG_290 "קובץ אינדקס"
+t MSG_291 "בחר גירסה"
+t MSG_292 "נא לבחור גרסת windows להתקנה:"
+t MSG_293 "גירסת Windows לא נתמכת"
+t MSG_294 "גרסת ה windows הזו לא נתמכת יותר ע"י רופוס."
 
 ################################################################################
 l "hu-HU" "Hungarian (Magyar)" 0x040e
-v 1.0.19
+v 1.0.20
 b "en-US"
 
 # Main dialog
@@ -6818,10 +7332,11 @@ t MSG_284 "A letöltött futtatható fájl nem rendelkezik digitális aláírás
 t MSG_285 "A letöltött futtatható fájlt '%s' írta alá.\nEz egy általunk nem felismert aláírás, és "
 	"rosszindulatú tevékenységre utalhat...\nBiztosan futtatni akarod ezt a fájlt?"
 t MSG_286 "Meghajtó kinullázása: %0.1f%% kész"
+t MSG_287 "Nem-USB eltávolítható eszközök észlelése"
 
 ################################################################################
 l "id-ID" "Indonesian (Bahasa Indonesia)" 0x0421
-v 1.0.19
+v 1.0.20
 b "en-US"
 
 # Main dialog
@@ -7303,10 +7818,12 @@ t MSG_284 "Berkas exe yang diunduh memiliki tanda tangan digital yang salah."
 t MSG_285 "Berkas exe yang diunduh ditandatangani oleh '%s'.\nTanda tangan ini "
 	"tidak kami kenali dan bisa menjadi pertanda dari aktivitas berbahaya...\n"
 	"Apakah Anda yakin ingin menjalankan berkas ini?"
+t MSG_286 "Mengosongkan perangkat: %0.1f%% selesai"
+t MSG_287 "Deteksi selain perangkat USB yang dapat dilepas"
 
 ################################################################################
 l "it-IT" "Italian (Italiano)" 0x0410, 0x0810
-v 1.0.19
+v 1.0.21
 b "en-US"
 
 g IDD_DIALOG
@@ -7734,10 +8251,19 @@ t MSG_283 "Firma non valida"
 t MSG_284 "L'eseguibile scaricato non ha una firma digitale."
 t MSG_285 "L'eseguibile scaricato è firmato da '%s'.\nQuesta non è una firma riconosciuta e potrebbe "
 	"indicare qualche forma di attività malevola.\nSei sicuro di voler eseguire questo file?"
+t MSG_286 "Azzeramento disco: %0.1f%% completato"
+t MSG_287 "Rilevamento di unità rimuovibili non USB"
+t MSG_288 "Privilegi elevati non disponibili"
+t MSG_289 "Questa applicazione può essere eseguita solo con privilegi elevati"
+t MSG_290 "Indicizzazione file"
+t MSG_291 "Selezione versione"
+t MSG_292 "Seleziona la versione di Windows che vuoi installare:"
+t MSG_293 "Versione Windows non supportata"
+t MSG_294 "Questa versione di Windows non è più supportata da Rufus."
 
 ######################################################################
 l "ja-JP" "Japanese (日本語)" 0x0411
-v 1.0.19
+v 1.0.20
 b "en-US"
 
 # Main dialog
@@ -8230,10 +8756,11 @@ t MSG_284 "ダウンロードした実行可能ファイルにはデジタル署
 t MSG_285 "このダウンロードした実行可能ファイルのデジタル署名は '%s' 。\nこれは私達の署名ではありません"
 	"悪意のあるソフトウェアの可能性があります...\nこのファイルを実行しても良いですか?"
 t MSG_286 "'0'をドライブへ書き込み初期化中: %0.1f%% 完了"
+t MSG_287 "USB接続でないリムーバブルディスクの検出"
 
 ################################################################################
 l "ko-KR" "Korean (한국어)" 0x0412
-v 1.0.19
+v 1.0.20
 b "en-US"
 
 # Main dialog
@@ -8668,10 +9195,12 @@ t MSG_283 "유효하지 않은 디지털 서명"
 t MSG_284 "다운로드 한 실행 파일에 디지털 서명이 없습니다."
 t MSG_285 "다운로드 한 실행 파일은 '%s'에 의해 서명됩니다..\n이 파일은 정상적인 서명이 아니며 악성코드가 포함되어 있을 수 있습니다.\n"
 	"그래도 이 파일을 실행하시겠습니까?"
+t MSG_286 "드라이브 제로필: %0.1f%% 완료"
+t MSG_287 "비 이동식 USB 드라이브 검출"
 
 ################################################################################
 l "lv-LV" "Latvian (Latviešu)" 0x0426
-v 1.0.19
+v 1.0.20
 b "en-US"
 
 # Main dialog
@@ -8706,7 +9235,7 @@ s IDC_ABOUT -10,0
 t IDC_ABOUT "Par..."
 s IDC_LOG 35,0
 m IDC_LOG -10,0
-t IDC_LOG "Logs"
+t IDC_LOG "Atskaite"
 t IDCANCEL "Aizvērt"
 m IDCANCEL 20,0
 t IDC_START "Sākt"
@@ -8738,10 +9267,16 @@ t IDNO "Nē"
 
 # Log dialog
 g IDD_LOG
-t IDD_LOG "Logs"
-t IDC_LOG_CLEAR "Notīrīt logu"
-t IDC_LOG_SAVE "Ierakstīt logu"
-t IDCANCEL "Aizvērt logu"
+m IDC_LOG_CLEAR -60,0
+s IDC_LOG_CLEAR +20,0
+m IDC_LOG_SAVE -40,0
+s IDC_LOG_SAVE +20,0
+m IDCANCEL -20,0
+s IDCANCEL +20,0
+t IDD_LOG "Atskaite"
+t IDC_LOG_CLEAR "Notīrīt atskaiti"
+t IDC_LOG_SAVE "Saglabāt atskaiti"
+t IDCANCEL "Aizvērt atskaiti"
 
 # About -> Updates
 g IDD_UPDATE_POLICY
@@ -8754,7 +9289,7 @@ t IDS_UPDATE_FREQUENCY_TXT "Pārbaudīt jauninājumus"
 s IDS_UPDATE_FREQUENCY_TXT +10,0
 s IDC_UPDATE_FREQUENCY +44,0
 m IDC_UPDATE_FREQUENCY +5,0
-t IDS_INCLUDE_BETAS_TXT "Ieskaitot Beta versijas"
+t IDS_INCLUDE_BETAS_TXT "Ieskaitot Beta versijas:"
 s IDS_INCLUDE_BETAS_TXT +10,0
 m IDC_INCLUDE_BETAS +5,0
 m IDS_CHECK_NOW_GRP +40,0
@@ -8767,11 +9302,12 @@ m IDCANCEL +29,0
 # Dialog that appears when a new version is available
 g IDD_NEW_VERSION
 t IDD_NEW_VERSION "Jaunākas versijas meklēšana"
-t IDS_NEW_VERSION_AVAIL_TXT "Ir pieejama jaunāka programmas versija. Varat to lejuplādēt!"
-t IDC_WEBSITE "Piespiediet šeit lai pāriet uz saitu"
+c IDS_NEW_VERSION_AVAIL_TXT 255,0,0
+t IDS_NEW_VERSION_AVAIL_TXT "Ir pieejama jaunāka programmas versija. Varat to lejupielādēt!"
+t IDC_WEBSITE "Piespiediet šeit lai pāriet uz programmas mājas lapu"
 t IDS_NEW_VERSION_NOTES_GRP "Piezīmes"
-t IDS_NEW_VERSION_DOWNLOAD_GRP "Lejuplādēt"
-t IDC_DOWNLOAD "Lejuplādēt"
+t IDS_NEW_VERSION_DOWNLOAD_GRP "Lejupielādes saite"
+t IDC_DOWNLOAD "Lejupielādēt"
 t IDCANCEL "Aizvērt"
 
 # Messages used throughout the application
@@ -8781,7 +9317,7 @@ t MSG_002 "Cits Rufus eksemplārs darbojas.\n"
 t MSG_003 "UZMANĪBU: VISI DATI NO NESĒJA '%s' TIKS IZDZĒSTI!!!\n"
 	"Turpinājumam piespiediet OK. Lai atcelt, piespiediet Atcelt."
 t MSG_004 "Rufus jaunināšanas noteikumi"
-t MSG_005 "Vai vēlaties programmai meklēt jauninājumus internetā?"
+t MSG_005 "Vai vēlaties atļaut programmai meklēt jauninājumus internetā?"
 # Must be the same as IDD_DIALOG:IDCANCEL (i.e. "Close" - I know it's confusing)
 t MSG_006 "Aizvērt"
 t MSG_007 "Atcelt"
@@ -8823,7 +9359,7 @@ t MSG_036 "ISO imidžs"
 t MSG_037 "Aplikācija"
 t MSG_038 "Pārtraukt"
 t MSG_039 "Startēt"
-t MSG_040 "Lejuplādēt"
+t MSG_040 "Lejupielādēt"
 t MSG_041 "Darbību atcēla lietotājs"
 t MSG_042 "Kļūda"
 t MSG_043 "Kļūda: %s"
@@ -8869,9 +9405,9 @@ t MSG_076 "Neizdevās izveidot failus ielādei."
 t MSG_077 "Neizdevās diskam piešķirt burtu."
 t MSG_078 "Neizdevās izveidot GUID disku."
 t MSG_079 "Ierīce nav gatava."
-t MSG_080 "Rufus noteica ka Windows nav beidzis darbu ar USB ierīces ātrpikļuves buferi.\n\n"
+t MSG_080 "Rufus noteica ka Windows nav beidzis darbu ar USB ierīces ātrpiekļuves buferi.\n\n"
 	"Atkarībā no USB ierīces ātruma šīs operācijas pabeigšana var aizņemt ilgāku laiku, "
-	"īpaši lielākiem failiem.\n\nIeteikums sagaidīt Windows darbības beigas, lai nesabojāt ierīci. "
+	"īpaši lielākiem failiem.\n\nIeteikums: sagaidīt Windows darbības beigas, lai nesabojāt ierīci. "
 	"Ja jums nav iespējas gaidīt, varat vienkārši atvienot ierīci..."
 t MSG_081 "Neatbalstāms imidža formāts"
 t MSG_082 "Izvēlētais imidžs nav ielādes, jeb izmanto Rufus nezināmu ielādes metodi vai saspiešanas formātu."
@@ -8882,7 +9418,7 @@ t MSG_084 "Šis ISO imidžs izmanto novecojušas versijas '%s'.\n"
 	"- Izvēlieties 'Jā' lai pieslēgtos pie interneta un ielādētu jaunāku versiju\n"
 	"- Izvēlieties 'Nē' lai ISO fails paliktu nemainīts\n"
 	"Ja nezināt ko darīt, izvēlieties 'Jā'.\n\n"
-	"Piezīme: Jaunais fails tiks lejuplādēts tekošajā mapē, un eksistējot "
+	"Piezīme: Jaunais fails tiks lejupielādēts tekošajā mapē, un eksistējošais "
 	"'%s' automātiski tiks samainīts."
 t MSG_085 "Lejuplādēts %s"
 t MSG_086 "Nav izvēlēts imidžs"
@@ -8894,11 +9430,11 @@ t MSG_088 "Imidžs pārāk liels"
 t MSG_089 "Izvēlētajam nesējam imidžs pārāk liels."
 t MSG_090 "Neatbalstāms ISO formāts"
 t MSG_091 "Izmantojot sistēmas interfeisu UEFI tikai EFI atbalsta ISO ielādes imidžu. "
-	"Izvēlieties EFI ielādes ISO vai izvēlieties interfeisu BIOS."
+	"Izvēlieties EFI ielādes ISO failu vai izvēlieties interfeisu BIOS."
 t MSG_092 "Neatbalstāma failu sistēma"
 t MSG_093 "SVARĪGI: ŠIS NESĒJS SATUR VAIRĀKAS PARTĪCIJAS!!\n\n"
-	"Nesējs var saturēt sadaļas kuras nav attēlotas vai redzamas no Windows. "
-	"Ja vēlaties turpināt, paši atbildat par datu zaudēšanu uz šādām partīcijām."
+	"Nesējs var saturēt sadaļas kuras nav attēlotas vai redzamas no Windows OS. "
+	"Ja vēlaties turpināt, paši esat atbildīgi par datu zaudēšanu uz šādām partīcijām."
 t MSG_094 "Konstatētas vairākas partīcijas"
 t MSG_095 "DD imidžs"
 t MSG_096 "Tekošā failu sistēma nevar tikt izmantota ar šo ISO tipu. "
@@ -8906,17 +9442,17 @@ t MSG_096 "Tekošā failu sistēma nevar tikt izmantota ar šo ISO tipu. "
 t MSG_097 "'%s' var izmantot tikai ar NTFS failu sistēmu."
 t MSG_098 "SVARĪGI: Jūs mēģinat instalēt 'Windows To Go', bet izvēlētajam diskam nav "
 	"nepieciešamā atribūta 'FIKSĒTS', līdz ar to Windows ielāde visticamāk nenotiks, "
-	"jo šis Microsoft prodikts neatbalsta iekārtas kurām nav atribūts 'NOŅEMAMS'. "
+	"jo šis Microsoft produkts neatbalsta iekārtas kurām ir atribūts 'NOŅEMAMS'. "
 	"\n\nVai vēlaties turpināt?\n\n"
-	"Piezīme: Atribūtu 'FIKSĒTS/NOŅEMAMS' var mainīt tikai iekārtas uzstāadījumos "
-	"izmantojot rīkus no iekārtas ražotāja. Šādi rīki parasti brīvā piekļuvē NETIEK IZLIKTI..."
+	"Piezīme: Atribūtu 'FIKSĒTS/NOŅEMAMS' var mainīt tikai iekārtas uzstādījumos "
+	"izmantojot rīkus no iekārtas ražotāja. Šādi rīki parasti brīvā piekļuvē NETIEK IZVIETOTI..."
 t MSG_099 "Failu sistēmas ierobežojums"
-t MSG_100 "Šis ISO imidžs satur failu lielāku kā 4GB, kas ir vairāk nekā "
+t MSG_100 "Šis ISO imidžs satur failu lielāku par 4GB, kas ir vairāk nekā "
 	"maksimāli pieļaujamais apjoms izmantojot FAT vai FAT32 failu sistēmu."
 t MSG_101 "Kļūdains WIM atbalsts"
 t MSG_102 "Jūsu OS nevar atpakot failus no WIM arhīviem. Savukārt tas "
 	"nepieciešams EFI ielādes diska izveidei OS Windows 7 vai Windows Vista USB diskiem. To var izlabot "
-	"instalējot pēdējo 7-Zip versiju.\nVai vēlaties apmeklēt 7-zip ielādes saitu?"
+	"instalējot pēdējo 7-Zip versiju.\nVai vēlaties apmeklēt 7-zip ielādes mājas lapu?"
 t MSG_103 "Lejuplādēts %s?"
 t MSG_104 "Instalācijai nepieciešama %s vai jaunāka faila '%s' versija.\n"
 	"Tā kā fails ir lielāks par 100 KB, un pieder %s ISO imidžiem, "
@@ -9135,10 +9671,12 @@ t MSG_283 "Nederīgs paraksts"
 t MSG_284 "Ielādētajam izpildfailam ir kļūdains ciparu paraksts."
 t MSG_285 "Ielādētais izpildfails parakstīts kā '%s'.\nTas ir neatpazīts paraksts un iespējams, "
 	"var radīt aizdomīgas aktivitātes...\nVai tiešām vēlaties izpildīt šo failu?"
+t MSG_286 "Nulles disks: %0.1f%% paveikts"
+t MSG_287 "neUSB disku noteikšana"
 
 ################################################################################
 l "lt-LT" "Lithuanian (Lietuvių)" 0x0427
-v 1.0.19
+v 1.0.20
 b "en-US"
 
 # Main dialog
@@ -9596,6 +10134,8 @@ t MSG_283 "Negaliojantis parašas"
 t MSG_284 "Atsiųstas vykdomasis failas neturi skaitmeninio parašo."
 t MSG_285 "Atsiųstą vykdomąjį failą pasirašė '%s'.\nŠio parašo mes neatpažįstame ir tai gali "
 	"būti tam tikros kenkėjiškos veiklos požymis...\nAr jūs tikrai norite vykdyti šį failą?"
+t MSG_286 "Nulinamas diskas: %0.1f%% baigta"
+t MSG_287 "Ne USB keičiamų diskų aptikimas"	
 
 ################################################################################
 l "ms-MY" "Malay (Bahasa Malaysia)" 0x043e, 0x083e
@@ -10080,7 +10620,7 @@ t MSG_286 "Mensifarkan pemacu: %0.1f%% selesai"
 
 ################################################################################
 l "nb-NO" "Norwegian (Norsk)" 0x0414
-v 1.0.19
+v 1.0.21
 b "en-US"
 
 # Main dialog
@@ -10550,11 +11090,20 @@ t MSG_283 "Ugyldig signatur"
 t MSG_284 "Den nedlastede programfil mangler en digital signatur."
 t MSG_285 "Den nedlastede programfil er signert av '%s'.\nDette er en signatur vi ikke gjenkjenner, og kan "
 	"indikere en form for skadelig aktivitet...\nEr du sikker på at du vil kjøre denne filen?"
+t MSG_286 "Skriver 0-er til stasjon: %0.1f%% ferdig"
+t MSG_287 "Oppdagelse av ikke-USB flyttbare stasjoner"
+t MSG_288 "Mangler utvidede rettigheter"
+t MSG_289 "Dette programmet kan bare kjøre med utvidede rettigheter"
+t MSG_290 "Fil indeksering"
+t MSG_291 "Versjons valg"
+t MSG_292 "Vennligst velg den versjonen av Windows du ønsker å installere:"
+t MSG_293 "Ikke støttet Windows versjon"
+t MSG_294 "Denne versjonen av Windows er ikke støttet av Rufus lengre." 
 
 ################################################################################
 l "fa-IR" "Persian (فارسی)" 0x0429
 a "r"
-v 1.0.19
+v 1.0.20
 b "en-US"
 
 # Main dialog
@@ -11102,7 +11651,7 @@ t MSG_287 "شناسايي درايوهاي غير USB"
 
 ################################################################################
 l "pl-PL" "Polish (Polski)" 0x0415
-v 1.0.19
+v 1.0.20
 b "en-US"
 # my info: 6.9.2015,22:39
 
@@ -11574,10 +12123,12 @@ t MSG_283 "Nieprawidłowa sygnatura"
 t MSG_284 "Pobrany plik wykonywalny nie posiada cyfrowej sygnatury."
 t MSG_285 "Pobrany plik wykonywalny jest podpisany przez '%s'.\nTo nie jest rozpoznawana przez nas sygnatura i może "
 	"wskazywać na pewne formy złośliwych zachowań...\nCzy na pewno chcesz uruchomić ten plik?"
+t MSG_286 "Zerowanie dysku: ukończono %0.1f%%"
+t MSG_287 "Wykrywanie dysków wymiennych nie-USB"
 
 ################################################################################
 l "pt-BR" "Portuguese Brazilian (Português do Brasil)" 0x0416
-v 1.0.19
+v 1.0.21
 b "en-US"
 
 # Main dialog
@@ -11995,7 +12546,7 @@ t MSG_273 "Mudar o idioma do aplicativo"
 t MSG_274 "Imagem ISOHybrid detectada"
 t MSG_275 "A imagem que você selecionou é do tipo 'ISOHybrid'. Isso significa que pode ser escrita em "
 	"modo %s (cópia de arquivo) ou modo %s (imagem de disco).\n"
-	"Rufus recomenda usar o modo %s , para que vocÇe sempre tenha acesso total ao drive após a gravação.\n"
+	"Rufus recomenda usar o modo %s, para que você sempre tenha acesso total ao drive após a gravação.\n"
 	"No entanto, se você encontrar algum erro durante o boot, você pode tentar gravar novamente pelo modo %s.\n\n"
 	"Por favor selecione o modo que deseja usar para gravar esta imagem:"
 t MSG_276 "Gravar no modo %s (Recomendado)"
@@ -12009,10 +12560,19 @@ t MSG_283 "Assinatura digital inválida"
 t MSG_284 "O executável baixado não contém uma assinatura digital."
 t MSG_285 "O executável baixado é assinado por '%s'.\nEsta assinatura não é reconhecida e pode "
 	"indicar alguma forma de atividade maliciosa...\nVocê tem certeza que deseja executar este arquivo?"
+t MSG_286 "Zerando HD: %0.1f%% concluído"
+t MSG_287 "Detecção de drives não USB removíveis"
+t MSG_288 "Sem permissão elevada"
+t MSG_289 "Este programa só pode ser rodado usando permissão elevada"
+t MSG_290 "Indexação de arquivo"
+t MSG_291 "Seleção de versão"
+t MSG_292 "Por favor, selecione a versão do Windows que deseja instalar:"
+t MSG_293 "Versão do Windows não suportada"
+t MSG_294 "Esta versão do Windows não é mais suportada pelo Rufos"
 
 ################################################################################
 l "pt-PT" "Portuguese Standard (Português)" 0x0816
-v 1.0.19
+v 1.0.21
 b "en-US"
 
 # Main dialog
@@ -12469,6 +13029,15 @@ t MSG_283 "Assinatura inválida"
 t MSG_284 "No executável transferido está a faltar uma assinatura digital."
 t MSG_285 "O executável transferido está assinado por '%s'.\nNão é uma assinatura reconhecida e "
 	"poderá indicar algum tipo de actividade mal intencionada...\nTem certeza de que deseja executar este ficheiro?"
+t MSG_286 "A limpar disco: %0.1f%% concluído"
+t MSG_287 "Detecção de unidades removíveis não-USB"
+t MSG_288 "Sem privilégios de administrador"
+t MSG_289 "Esta aplicação só pode ser executada com privilégios de administrador"
+t MSG_290 "indexação de ficheiros"
+t MSG_291 "Seleção de versão"
+t MSG_292 "Selecione a versão do Windows que deseja instalar:"
+t MSG_293 "Versão de Windows não suportada"
+t MSG_294 "Esta versão do Windows já não é suportada por Rufus."
 
 ################################################################################
 l "ro-RO" "Romanian (Română)" 0x0418, 0x0818
@@ -12889,7 +13458,7 @@ t MSG_287 "Detectarea unităților mobile de bază non-USB"
 
 ################################################################################
 l "ru-RU" "Russian (Русский)" 0x0419, 0x0819
-v 1.0.19
+v 1.0.20
 b "en-US"
 
 # Main dialog
@@ -13322,10 +13891,12 @@ t MSG_283 "Неверная подпись"
 t MSG_284 "У загруженного файла отсутствует цифровая подпись."
 t MSG_285 "Загруженный файл подписан '%s'.\nЭто не та подпись, которая признается, что "
 	"указывает на некоторые формы вредоносных действий...\nВы уверены, что хотите запустить этот файл?"
+t MSG_286 "Обнуление диска: %0.1f%% выполнено"
+t MSG_287 "Выявление не-USB съемных дисков"
 
 ################################################################################
 l "sr-SP" "Serbian (Srpski)" 0x241a, 0x081a, 0x181a, 0x2c1a, 0x701a, 0x7c1a
-v 1.0.19
+v 1.0.20
 b "en-US"
 
 # Main dialog
@@ -13804,10 +14375,11 @@ t MSG_284 "Nedostaje digitalni potpis u izvršnoj datoteci."
 t MSG_285 "Preuzeta izvršna datoteka je potpisana od strane '%s'.\nOvo nije potpis koji prepozanajemo i može "
 	"ukazivati na neki oblik zlonamjerne aktivnosti...\nDa li ste sigurni da želite pokrenuti ovaj program?"
 t MSG_286 "Anuliranje uređaja: %0.1f%% završeno"
+t MSG_287 "Detekcija ne-USB diskova"
 
 ################################################################################
 l "sk-SK" "Slovak (Slovensky)" 0x041B
-v 1.0.19
+v 1.0.20
 b "en-US"
 
 # Main dialog
@@ -14249,10 +14821,12 @@ t MSG_283 "Neplatný podpis
 t MSG_284 "Stiahnutému inštalátoru chýba digitálny podpis."
 t MSG_285 "Stiahnutý inštalátor podpísal '%s'.\nTento podpis nebol rozoznaný a môže znamenať "
 	"nejakú formu škodlivej aktivity...\nSte si istý, že chcete spustiť tento súbor?"
+t MSG_286 "Vymazávanie zariadenia: %0.1f%% dokončených"
+t MSG_287 "Zisťovanie nie-USB vymeniteľných zariadení" 	
 
 ################################################################################
-l "sl-SI" "Slovene (Slovenščina)" 0x0424
-v 1.0.19
+l "sl-SI" "Slovenian (Slovenščina)" 0x0424
+v 1.0.20
 b "en-US"
 
 # Main dialog
@@ -14690,10 +15264,12 @@ t MSG_283 "Neveljaven podpis"
 t MSG_284 "Prenesena datoteka nima digitalnega podpisa."
 t MSG_285 "Oseba, ki je podpisala preneseno datoteko, je '%s'.\nTa podpis se ne ujema s pričakovanim, kar lahko pomeni, "
 	"da je to zlonamerna datoteka, ki jo vam je nekdo podtaknil.\nAli ste prepričani, da jo želite zagnati?"
+t MSG_286 "Zapolnjujem nosilec z ničlami: %0.1f%%"
+t MSG_287 "Zaznava neodstranljivih nosilcev"
 
 ################################################################################
 l "es-ES" "Spanish (Español)" 0x040a, 0x080a, 0x0c0a, 0x100a, 0x140a, 0x180a, 0x1c0a, 0x200a, 0x240a, 0x280a, 0x2c0a, 0x300a, 0x340a, 0x380a, 0x3c0a, 0x400a, 0x440a, 0x480a, 0x4c0a, 0x500a, 0x540a, 0x580a
-v 1.0.19
+v 1.0.20
 b "en-US"
 
 # Main dialog
@@ -15159,10 +15735,12 @@ t MSG_283 "Firma no válida"
 t MSG_284 "El ejecutable descargado carece de firma digital."
 t MSG_285 "El ejecutable descargado está firmado por '%s'.\nNo reconocemos este tipo de firma y podría "
 	"indicar alguna forma de actividad maliciosa...\n¿Está seguro de que quieres ejecutar este fichero?"
+t MSG_286 "Borrando a ceros la unidad: %0.1f%% completado"
+t MSG_287 "Detección de unidades extraibles no USB"
 
 ################################################################################
 l "sv-SE" "Swedish (Svenska)" 0x041d, 0x081d
-v 1.0.19
+v 1.0.21
 b "en-US"
 
 # Main dialog
@@ -15624,10 +16202,19 @@ t MSG_283 "Ogiltig signatur"
 t MSG_284 "Den nedladdade körbara filen saknar digital signatur."
 t MSG_285 "Den nedladdade körbara filen är signerad av '%s'.\nDetta är inte en signatur vi känner igen och "
 	"detta kan tyda på någon form av skadlig aktivitet...\nÄr du säker på att du vill köra filen?"
+t MSG_286 "Nollställer enheten: %0.1f%% klart"
+t MSG_287 "Visar även icke flyttbara USB-enheter"
+t MSG_288 "Förhöjda privilegier saknas"
+t MSG_289 "Detta program kräver förhöjda privilegier för att fungera"
+t MSG_290 "Filindexering"
+t MSG_291 "Välj version"
+t MSG_292 "Välj den version av Windows du vill installera:"
+t MSG_293 "Denna version stöds inte"
+t MSG_294 "Denna version av Windows stöds inte längre av Rufus."
 
 ################################################################################
 l "th-TH" "Thai (ไทย)" 0x041e
-v 1.0.19
+v 1.0.20
 
 # Main dialog
 g IDD_DIALOG
@@ -15762,8 +16349,8 @@ t MSG_045 "USB Storage Device (Generic)"
 t MSG_046 "%s (Disk %d) [%s]"
 # Used when a drive is detected that contains more than one partition
 t MSG_047 "พบหลายพาร์ทิชั่น"
-t MSG_048 "Rufus - Flushing buffers"
-t MSG_049 "Rufus - Cancellation"
+t MSG_048 "Rufus - กำลังล้างบัฟเฟอร์"
+t MSG_049 "Rufus - กำลังยกเลิกการดำเนินการ"
 
 # Error messages
 t MSG_050 "สำเร็จ"
@@ -16050,7 +16637,7 @@ t MSG_262 "การรองรับ ISO"
 t MSG_263 "ใช้หน่วยของขนาดตามจริง (เช่น 1KB คือ 1024 bytes)"
 t MSG_264 "กำลังลบไดเรคทอรี่ '%s'"
 t MSG_265 "กำลังตรวจหาดิสก์ VMWare"
-t MSG_266 "Dual UEFI/BIOS mode"
+t MSG_266 "ระบบบูตคู่ UEFI/BIOS"
 t MSG_267 "กำลังใช้อิมเมจ Windows: %0.1f%%"
 t MSG_268 "กำลังใช้อิมเมจ Windows..."
 t MSG_269 "Preserve timestamps"
@@ -16082,11 +16669,12 @@ t MSG_283 "ใบรับรองผิดพลาด"
 t MSG_284 "ไฟล์ที่ดาวน์โหลดมาไม่มีการรับรองดิจิทัล"
 t MSG_285 "ไฟล์ที่ดาวน์โหลดมาถูกรับรองโดย '%s'.\nซึ่งไม่ใช่การรับรองที่เรารู้จัก ซึ่งอาจ"
 	"ทำให้เกิดกิจกรรมที่เกิดภัยคุกคามได้...\nคุณต้องการจะเปิดไฟล์นี้หรือไม่?"
-t MSG_286 "Zeroing drive: %0.1f%%"
+t MSG_286 "กำลังเขียนไดร์ฟด้วย zero byte: %0.1f%%"
+t MSG_287 "กำลังตรวจสอบไดร์ฟที่ไม่ใช่ USB"
 
 ################################################################################
 l "tr-TR" "Turkish (Türkçe)" 0x041F
-v 1.0.20
+v 1.0.21
 b "en-US"
 
 # Main dialog
@@ -16564,10 +17152,17 @@ t MSG_285 "İndirilen yürütülebilir dosya '%s' tarafından imzalanmış.\nBu 
 	"etkinliğini belirtebileceğimiz bir imza değil...\nBu dosyayı çalıştırmak istediğinize emin misiniz?"
 t MSG_286 "Sürücü sıfırlanıyor: %0.1f%% tamamlandı"
 t MSG_287 "USB olmayan çıkarılabilir aygıtlar taranıyor"
+t MSG_288 "Kayıp yüksek ayrıcalıklar"
+t MSG_289 "Bu uygulama yalnız yüksek ayrıcalıklarla çalıştırılabilir"
+t MSG_290 "Dosya Dizinleme"
+t MSG_291 "Sürüm seçimi"
+t MSG_292 "Lütfen yüklemek istediğiniz Windows sürümünü seçin:"
+t MSG_293 "Desteklenmeyen Windows sürümü"
+t MSG_294 "Windows'un bu sürümü artık Rufus tarafından desteklenmiyor."
 
 ################################################################################
 l "uk-UA" "Ukrainian (Українська)" 0x0422
-v 1.0.19
+v 1.0.20
 b "en-US"
 
 # Main dialog
@@ -17019,10 +17614,12 @@ t MSG_283 "Невірний підпис"
 t MSG_284 "У завантаженого файлу відсутній цифровий підпис."
 t MSG_285 "Завантажений файл підписаний '%s'.\nЦе не той підпис, який визнається, "
   "що вказує на деякі форми шкідливих дій...\nВи впевнені, що хочете запустити цей файл?"
+t MSG_286 "Обнуління диска: %0.1f%% завершено"
+t MSG_287 "Виявлення знімних не-USB носіїв"
 
 ################################################################################
 l "vi-VN" "Vietnamese (Tiếng Việt)" 0x042A
-v 1.0.19
+v 1.0.20
 b "en-US"
 
 # Main dialog
@@ -17475,3 +18072,5 @@ t MSG_283 "Chữ ký không hợp lệ"
 t MSG_284 "Tập tin thực thi đã tải xuống thiếu chữ ký số."
 t MSG_285 "Tập tin thực thi đã tải xuống được ký bởi '%s'.\nĐây không phải chữ ký số chúng tôi công nhận và có thể "
 	"xác định là một dạng hoạt động nguy hiểm...\nBạn chắc muốn chạy tập tin này?"
+t MSG_286 "Quy ổ đĩa về 0: đã hoàn thành %0.1f%%"
+t MSG_287 "Phát hiện ổ đĩa tháo được không phải USB"
